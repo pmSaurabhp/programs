@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<math.h>
+void main()
+{
+int num,digit,temp,arm=0;
+cin>>num;
+temp=num;
+while(temp!=0)
+{
+ digit=temp%10;
+ arm=arm+pow(digit,3);
+ temp=temp/10;
+}
+if(arm==num)
+cout<<"armstrong";
+else
+cout<<"not armstrong";
+getch();
+}

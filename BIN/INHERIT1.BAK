@@ -1,0 +1,37 @@
+#include<iostream.h>
+#include<conio.h>
+class base
+{ int a;
+
+public:
+  void take()
+{cout<<"a=";
+cin>>a;
+  }
+  void disp()
+  {
+  cout<<" a="<<a<<endl;
+  }
+};
+class derived:public base
+{int i;
+public:
+   void t()
+  { cout<<"i=";
+  cin>>i;
+  }
+  void d()
+  {cout<<" i ="<<i;
+  }
+};
+void main()
+{ clrscr();
+base o1;
+derived obj;
+ obj.take();
+ o1.disp();
+ obj.disp();
+ obj.t();
+ obj.d();
+ getch();
+}

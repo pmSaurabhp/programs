@@ -1,0 +1,51 @@
+// friend function scope is limited to it
+// member function scope is global
+
+#include<iostream.h>
+#include<conio.h>
+int j=0,l=0;
+class a
+{ int b;
+public:
+  friend void func(a obj);
+  void disp();
+ };
+void func(a obj)
+{
+
+if(j==1)
+{obj.b=5;
+cout<<"friendiffff "<<obj.b<<endl;
+j=j+1;
+
+}
+else
+{ cout<<"friend ";
+cout<<obj.b<<endl;
+j=j+1;
+}
+}
+void a::disp()
+{ if(l==2)
+{cout<<"dispiffff "<<b<<endl;
+ l++;
+}
+else
+{b=1;
+cout<<"disp "<<b<<endl;
+l++;
+}
+}
+void main()
+{
+clrscr();
+ a obj;
+func(obj);
+obj.disp();
+func(obj);
+func(obj);
+obj.disp();
+obj.disp();
+func(obj);
+getch();
+}

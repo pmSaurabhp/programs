@@ -1,0 +1,15 @@
+#include<iostream.h>
+#include<fstream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+ ofstream fout;
+ int i;
+ fout.open("myfile",ios::ate);                   // h e l l o s a u r a b  h  _  _  _ _
+ cout<<fout.tellp();				 // 0 1 2 3 4 5 6 7 8 9 10 11 12 13
+ fout.seekp(2,ios::beg);
+ cout<<fout.tellp();
+ fout<<"sss";
+
+ getch();
+}

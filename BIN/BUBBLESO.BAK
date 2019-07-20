@@ -1,0 +1,32 @@
+#include<conio.h>
+#include<stdio.h>
+void swap(int,int);
+int main()
+{
+ int a[20],i,n;
+ printf("Enter the no. of elements:\n");
+ scanf("%d",&n);
+ printf("Enter the values:");
+ for(i=0;i<n;i++)
+ {
+  scanf("%d",&a[i]);
+ }
+ for(i=0;i<n;i++)
+ {
+  if(a[i]<a[i+1])
+  swap(a[i],a[i+1]);
+ }
+ for(i=0;i<n;i++)
+ {
+  printf("%d",a[i]);
+ }
+getch();
+return 0;
+}
+
+void swap(int x, int y)
+{
+ x=x+y;
+ y=x-y;
+ x=x-y;
+}

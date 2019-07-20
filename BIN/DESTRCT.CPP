@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+class test
+{ static int a;                     // static variable declared
+public:                             // static variable is initialised as
+  test()                            // when declared
+  {   a++;                                         |
+   cout<<" object "<<a<<" created ";               |
+   }                                               |
+						   |
+  ~test()                                          |
+  { cout<<" object "<<a<<" destroyed ";            |
+   a--;                                            |
+   }                                               |
+  };                                               |
+int test::a=0;                      // static variable defined
+void main()
+{ clrscr();
+test obj1;
+   {  cout<<" \n block 1 \n";
+   test obj2,obj3;
+     }
+   getch();
+}

@@ -1,0 +1,70 @@
+#include<conio.h>
+#include<stdio.h>
+
+struct bst
+{ int data;
+  struct bst *left;
+  struct bst *right;
+};
+struct bst* insert(struct bst* root,int data);
+void search(struct bst* root,int data);
+struct bst* new(int data);
+void main()
+{ struct bst* root=NULL;
+  root->left=root->right=NULL;
+
+ clrscr();
+ printf("\n%d %d %d %d",root->left,root->data,root->right,*root);
+ root=insert(root,30);
+ printf("\n%d %d %d %d",root->left,root->data,root->right,*root);
+ root=insert(root,40);
+ printf("\n%d %d %d %d",root->left,root->data,root->right,*root);
+ root=insert(root,20);
+ printf("\n%d %d %d %d",root->left,root->data,root->right,*root);
+ root=insert(root,10);
+ printf("\n%d %d %d %d",root->left,root->data,root->right,*root);
+
+ search(root,50);
+ search(root,10);
+ getch();
+}
+
+struct bst* insert(struct bst *root,int data)
+{
+ if(root==NULL)
+ { root=new(data); }
+  else
+  { if(data<root->data)
+     { root->left=insert(root->left,data);
+     }
+     else
+     {root->right=insert(root->right,data);
+     }
+  }
+
+return root;
+}
+struct bst* new(int data)
+{  struct bst *newnode=(struct bst*)malloc(sizeof(struct bst*));
+newnode->data=data;
+newnode->left=newnode->right=NULL;    // dma if not used
+				      // nodes created will destroy
+return newnode;                       // after function ends
+}
+void search(struct bst *root,int data)
+{
+ if(root==NULL)
+ {printf("\n %d not exist",data); }
+ else
+  { if(root->data==data)
+     {printf("\n found %d",data);
+     }
+    else
+     {if(root->data>data)
+      { search(root->left,data);}
+      else
+      { search(root->right,data); }
+     }
+  }
+
+}

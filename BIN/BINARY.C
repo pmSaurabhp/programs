@@ -1,0 +1,21 @@
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+int high=4,low=0,m,s=5,a[]={1,2,3,4,5};
+clrscr();
+while(low<=high)
+{  m=(low+high)/2;
+if(a[m]==s)
+   { printf(" found at location%d",m);
+     break;
+     }
+     else if(a[m]>s)
+     high=m-1;
+   else
+    low=m+1;
+   }
+   if(low>high)
+   printf("not found%dis not presnt",s)  ;
+   getch();
+   }

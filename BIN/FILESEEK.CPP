@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<fstream.h>
+#include<conio.h>
+void main()
+{ clrscr();
+ ifstream fin;
+ int i;
+
+ fin.open("myfile");
+cout<<"file pointer is at h pos="<<fin.tellg()<<endl;
+					 // h e l l o \ n
+ for(i=0;i<=7;i++)                       // 0 1 2 3 4 5 6
+{ cout<<fin.tellg();
+cout<<(char)fin.get();                   // s a u r  a  b  h  s  a  h  u
+}                                        // 7 8 9 10 11 12 13 14 15 16 17
+
+cout<<endl<<"file pointer is at pos="<<fin.tellg();
+fin.seekg(3,ios::cur);
+cout<<endl<<"pos of file pointer "<<fin.tellg()<<endl;
+for(i=2;i<=12;i++)
+{cout<<(char)fin.get();
+
+}
+cout<<endl<<fin.tellg();        // pointer at pos = 14
+fin.seekg(-3,ios::end);
+cout<<endl<<fin.tellg()<<endl;
+
+ getch();
+}

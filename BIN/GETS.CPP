@@ -1,0 +1,17 @@
+#include<conio.h>         // getch()
+#include<iostream.h>
+#include<stdio.h>       // gets()
+#include<fstream.h>     // private member get() and eof()
+void main()
+{ int i[10];
+char ch[10];
+clrscr();
+gets(ch);
+ifstream fin;
+cout<<fin.get()<<endl;      // get()= -1  file pointer at -1 position
+cout<<fin.eof()<<endl;      // eof()=1  file pointer at end of file True= 1
+
+cout<<getch()<<endl;
+cout<<getch();
+getch();
+}
