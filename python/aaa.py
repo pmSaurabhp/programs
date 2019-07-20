@@ -1,0 +1,9 @@
+5+2
+x=6
+y=7
+z=x+y
+print("hello")
+x=5
+y=4
+z=x+y
+print(z)
