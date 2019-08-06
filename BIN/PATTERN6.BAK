@@ -1,0 +1,17 @@
+void main()
+{
+int c,r,n=3,s=n;
+clrscr();
+for(r=1;r<=n;r++)
+{
+for(c=1;c<=2*s-1;c++)
+{
+gotoxy(40-s+c,r);
+printf("$");
+gotoxy(40-s+c,2*n-r);
+printf("$");
+}
+s--;
+}
+getch();
+}

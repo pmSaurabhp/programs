@@ -1,0 +1,19 @@
+#include<conio.h>
+#include<stdio.h>
+void main()
+{
+clrscr();
+int a[2][2],b[2][2],i,j,s[2][2];
+printf("enter no ");
+for(i=0;i<2;i++)
+{for(j=0;j<2;j++)
+{scanf("%d",&a[i][j]) ;}
+}
+for(i=0;i<2;i++)
+{for(j=0;j<2;j++)
+{scanf("%d",&b[i][j]);}
+}
+s[2][2]=a[2][2]+b[2][2]    ;
+printf("%d",s[2][2]);
+getch();
+}

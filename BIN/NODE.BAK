@@ -1,0 +1,19 @@
+#include<conio.h>
+#include<stdio.h>
+struct node
+{ int data;
+  struct node* left,*right;
+};
+void main()
+{ struct node *root,*newnode;
+  clrscr();
+   root->data=5;
+   printf("%d  %d      %d     %d",root->left,root->data,root->right,*root);
+   root=7;
+   printf("\n%d %d  %d %d",root->left,root->data,root->right,*root);
+   newnode=root;
+   printf("\n%d %d  %d %d",newnode->left,newnode->data,newnode->right,*newnode);
+   getch();
+}
+
+    // root=&root->data

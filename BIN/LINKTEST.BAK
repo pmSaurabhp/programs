@@ -1,0 +1,86 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct node
+{int data;
+struct node *next;
+};
+void main()
+{ int i,p,d,c;
+ struct node *n,*start,*temp,*temp2,*t,*newnode,*first,*second,*third;
+  clrscr();
+
+  printf("Enter no. in first,second,third");
+  scanf("%d %d %d",&first->data,&second->data,&third->data);
+  start=first;
+  first->next=second;
+  second->next=third;
+  third->next=NULL;
+  n=start;
+  while(n!=NULL)
+  {  printf("%d",n->data);
+    n=n->next;
+  }
+       printf("Enter position and data of newnode");
+    scanf("%d %d",&p,&newnode->data);
+     temp=start;
+    for(i=1;i<=p;i++)
+    { if(p==1)                         // inserion at first
+      {newnode->next=start;
+       start=newnode;
+       }
+    else
+    { if(i==p-1)                         // insertion at other position
+       { newnode->next=temp->next;
+	 temp->next=newnode;
+	}
+      else
+      {temp=temp->next;
+      }
+    }
+   }
+
+    n=start;
+   while(n!=NULL)
+   {printf("%d",n->data);
+    n=n->next;
+   }
+
+   printf("Enter position to be deleted :");
+   scanf("%d",&d);
+   temp=start;
+   temp2=start;
+   if(d=1)
+   { temp=temp->next;
+     temp2->next=NULL;
+     start=temp;
+   }
+   else
+   { while(t->next!=NULL)
+     { t=t->next;
+	c++;
+     }
+     if(d<c)
+     { temp2=start->next;
+       for(i=1;i<=d-1;i++)
+	{ temp=temp->next;
+	 temp2=temp2->next;
+	}
+       temp->next=temp->next->next;
+       temp2->next=NULL;
+     }
+   else
+    { while(temp->next->next!=NULL)
+	 { temp=temp->next;
+	 }
+	temp->next=NULL;
+    }
+  }
+  n=start;
+  while(n!=NULL)
+  { printf("%d",n->data);
+    n=n->next;
+  }
+
+  getch();
+  }
