@@ -1,0 +1,9 @@
+#include<conio.h>
+#include<stdio.h>
+void main()
+{ clrscr();
+int a=1,b;
+b=++a;
+printf("a=%d b=%d",a,b);
+getch();
+}
