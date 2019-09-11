@@ -9,8 +9,6 @@ void draw();
 void setup();
 void move();
 void direct();
-
-
 void direct2();
 
 int height=23,width=60,gameover=0;
@@ -20,6 +18,7 @@ int counttail=0;
 int x2,y2,fruitx2,fruity2,flag2=0;
 int tailx2[100],taily2[100];
 int counttail2=0;
+
 void main()
 { clrscr();
  int i,j;
@@ -31,12 +30,12 @@ while(gameover==0)
   move();
   direct();
   direct2();
-  for(i=0;i<400;i++)
+  for(i=0;i<800;i++)
    {for(j=0;j<1000;j++)
      {}
-     }
+   }
  }
- getch();
+
  getch();
  clrscr();
  if(gameover>0)
@@ -58,20 +57,20 @@ void draw()
  for(i=0;i<23;i++)
   { for(j=0;j<60;j++)
     { if(i==0||i==height-1||j==0||j==width-1)
-       {  cout<<"*";   }
+       {  cout<<"*";   }                    // boundry
        else
        {
 	if(i==y&&j==x||i==y2&&j==x2)
 	{
 	if(i==y&&j==x)
-	  {  cout<<'*';  }
+	  {  cout<<'*';  }                // snake 1
 	if(i==y2&&j==x2)
-	  { cout<<'+'; }
+	  { cout<<'+'; }                  // snake 2
 	}
 	else
 	{
 	if(i==fruity&&j==fruitx)
-	{ if((counttail2+counttail)%3==0)
+	{ if((counttail2+counttail)%4==0)
 	  { cout<<'O';  }
 	  else
 	  { cout<<'F';  }
@@ -116,8 +115,8 @@ void setup()
   x2=(width+4)/2;
   y2=(height+4)/2;
 
-
 }
+
 void move()
 { while(kbhit())
  { switch(getch())
@@ -146,31 +145,36 @@ void move()
        flag=4;
        }
        break;
-       case 'j':
+
+    case 'j':
      if(flag2!=2)
      {  flag2=1;
      }
      break;
-     case 'l':
+
+    case 'l':
      if(flag2!=1)
      {
        flag2=2;
 
       }
      break;
-      case 'i':
+
+     case 'i':
       if(flag2!=4)
      {
        flag2=3;
 
       }
       break;
+
       case 'k':
       if(flag2!=3)
       {
        flag2=4;
        }
        break;
+
        case 'q':
 	gameover=3;
 	break;
@@ -212,7 +216,7 @@ taily[0]=y;
     if(fruity==0||fruity==22)
     goto label4;
 
-    if(counttail%3==0)
+    if((counttail+counttail2)%4==0)
     { counttail++; }
 
     counttail++;
@@ -264,7 +268,7 @@ taily2[0]=y2;
     if(fruity==0||fruity==22)
     goto label42;
 
-    if(counttail2%3==0)
+    if((counttail2+counttail)%4==0)
     { counttail2++; }
     counttail2++;
   }
