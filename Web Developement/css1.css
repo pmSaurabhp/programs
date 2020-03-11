@@ -1,0 +1,18 @@
+h1{ 
+color: red;
+}
+body{
+background:gray;
+}
+div{
+background:#47e835;
+border-color: orange;
+border-width:10px;
+border-style:dotted;
+}
+p,h2{
+color:blue;
+}
+span{
+color:#eb349f;
+}
