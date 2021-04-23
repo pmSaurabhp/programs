@@ -1,0 +1,59 @@
+What is data-structure?
+ A Data Structure is a way of definung , storing and retrieving data in a sytematic manner.
+
+What is asymptotic analysis of an algorithm?
+ Asymtotic Analysis refers to mathematical boundation of runtime of an algorithm.
+Using asymptotic analysis we can predict the worst , best and average case of an algorithm.
+
+What are asymptotic notations?
+Best case is represented by Ω(n) notation.
+Worst case is represented by Ο(n) notation.
+Average case is represented by Θ(n) notation
+
+What is Greedy approach?
+ In a greedy algorithm we take a greedy choice i.e. choosing a locally optimal solution 
+that may or may not lead to  globally optimal solution
+eg. greedy approach works fine in case of Fractional Knapsack Problem but it gives Wrong result for 0/1 Knapsack Problem
+
+What is Divide and conquer ?
+In divide and Conquer algorithm we recursively divide the problem into 2 or more sub problems of same type until
+they get easily solved  and then combine results of these sub problems to get the solution of original problem.
+
+What is merge sort ?
+Merge sort algorithm is based on Divide and conquer approach as it divides the array in 2 sub halfes untill untill 
+only 1 element remains and then merge the sub array in sorted order .
+the worst , average and best case time complexity is O(n logn)
+
+what is quick sort?
+Quick sort is based on Dac approach as it selects a pivot element and make all elemnts less than pivot to right of it and 
+all elments greater than pivot to right of it this divide the array  into 2 parts and then repeat this proceess independently 
+in left and right part untill 1 element remains .
+the worst case tc is O(n^2) and average case is O(n logn)
+    
+what is difference between graphs and tree?
+A tree is a special type of graph i.e. a tree is a Directed Acyclic Graph where each node has atmost 1 parent where as
+in a graph a node can have multiple parents and links can be directed or undirected.
+TREE has n nodes and n-1 edges
+Graph has V vertices and ATMOST V*(V-1) edges for directed  &  V*(V-1)/2 for undirected
+
+what is dfs?
+In dfs we start from the root node and keep on exploring the branch as far as possible and 
+backtrack to previous node and repeat this process .
+We use STACK to store unvisited Vertex , pop TOS & push_back all its adjacent unvisited nodes & repeat .
+It is used to solve maze.
+Time complexity O( V + E) for graphs (with Adjacency List)  O(v^2) with adjacency matrix .     https://www.interviewbit.com/tutorial/depth-first-search/#Complexity-Analysis
+A tree  is a graph where edges = V-1    T(n)= O(V+V-1) = O(V)   ( Inorder , Preorder , Postorder ) https://cs.stackexchange.com/questions/98968/calculation-of-inorder-traversal-complexity/98998#98998?newreg=613d1ba21da14cfb85bf88de342d5fd2
+
+what is bfs?
+in BFS or level order traversal we start from root node and explore all neighbouring nodes at present deph 
+and then go to next depth and repeaat this process. 
+We use QUEUE to store unvisited Vertex , dequeue it & push_back all its adjacent unvisited nodes & repeat.
+Time complexity O( V + E) as we go to each vertex and store all its edges     
+ v1 +v2+v3 ...    + (# of v1 edges)+(# of v2 edges)+(# of v3 edges)..... = V + E
+
+Complete graph - every vertex is linked to every other vertex
+Connected  - if from every vertex we can reach to every other vertex
+ 
+What is Spanning tree?
+A spanning tree is a tree made from given graph having minimum no. of edges and connecting  all vertices.
+A complete graph can have maximum n^(n-2) number of spanning trees.

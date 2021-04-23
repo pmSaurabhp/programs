@@ -1,0 +1,49 @@
+1. What is Database?
+Ans. Database is place where data is stored in an organised way .
+
+2. What is DBMS?
+Ans. DBMS is software that is used to create , retrieve ,update and manage the database . 
+    It ensures that our data is consistent , organised and easily accessible .
+    It is an interface between Database and end User . 
+
+3. What are constraints?
+  rules concerning data .
+ NOT NULL  , UNIQUE , PRimary  ,Foreign  , default
+
+NOT NULL - restricts null values to insert in column
+
+UNIQUE key - all values in the column should be unique
+  	     it allows 1 NULL value
+	     a table can have many Unique fields.
+https://www.sqlshack.com/commonly-used-sql-server-constraints-not-null-unique-primary-key/
+
+PRIMARY KEY is a field or group of Fields that uniquely identifies each row in a Table.
+   it should contain Unique and NOT NULL values
+   a table can have one and only one primary key.
+   it follows entity integrity 
+
+Foreign key is a field in child table that refers to primary key of Parent table.
+	There can be Multiple Foreign keys in a table ,each refering to multiple parent table .
+	FOREIGN KEY allows inserting NULL values if there is no NOT NULL constraint defined on this key,
+	but the PRIMARY KEY does not accept NULLs.(it happens in case of Multiple foreign key) 
+	It follows Referential integrity . 
+	https://www.sqlshack.com/commonly-used-sql-server-constraints-foreign-key-check-default/
+	On update Cascade : make changes in child table when parent table is updated
+
+one to many : a customer can have many orders
+
+Many-to-many relation : A customer can buy many products and a product can be buyed by many customers 
+https://fmhelp.filemaker.com/help/18/fmp/en/index.html#page/FMP_Help/many-to-many-relationships.html
+
+self Join : it is regular join where table is joined to itself  based on certain columns.
+	 eg a table of id, employee_name, manager_id self join to show employee and its manager name
+    
+Entity is a real world object that has some properties associated with it.
+
+Transaction : is a program unit whose execution may or may not change the contents in a database .
+A transaction should have ACID properties
+ Atomicity - Either  transaction completes succesfuly or doesnt happens at all
+ Consistency - the data should be correct before and after transaction
+ Isolation - no other process can change data while trnsaction is running
+ Durable   - the data should stored safely after the transaction even after system failure 
+https://www.geeksforgeeks.org/acid-properties-in-dbms/

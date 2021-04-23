@@ -1,0 +1,62 @@
+what is OS? ( 3 main reponsibility)
+Operating system is a software that acts an interface between hardware and user .
+It acts as a platform for other software to run on. 
+It is responsible for resource management like  cpu , memory ,disk drives and other input output devices .   
+
+
+What is Process?
+Process is a program that is currently under execution.
+A process in memory is divided int o 4 parts - Stack, Heap, Text, Data.
+
+
+Multi core : a processor having many cores (i3: dual core ,(i5,i7 :quad core) ,octa core)
+  many cores means many processors in one processor
+  most time multi processor means  multi core 
+  eg. My laptop, my phone and other computers that people generally have 
+
+Multi processor : Many processors ( in servers or high gaming pc)
+
+Only 1 process can remain in 1 processor at a time.
+
+Sequential processing : After one process completes then other runs
+Concurently : 1st process runs partialy then 2nd runs partialy then 1st runs partialy .... and then all process completes
+Parallelly : When many processes run at same time 
+
+Multi Programing : When multiple programs run on 1 processor concurently.
+	when 1 process wants I/O resource the OS interupts it and assigns the processor to other Process.
+	if This process waiting for I/O resource is not interupted then other processes have to wait for its 
+	completion and CPU becomes idle.
+
+Multi Tasking : When Multiple tasks run on 1 processor Concurently making illusion that all tasks are parallely processed. 
+		This illusion is made possible by help of time slicing every process gets time slice after which
+		other process gets the processor. As this time slice is very small and cpu is very fast we feel that
+		all process are execting parallely.
+		Multi tasking  is a varition of Multi programing as we context switch if I/O resource is not available
+		but in Multi tasking we context switch after each time slice.
+
+Multi Processing : When Multiple programs run on Multiple processors Parallely this increases the efficiency 
+		  eg in a quad core processor 4 processes can run in 4 cores of processor 
+
+Multi Threading : When Multiple threads run on Multiple Processor or single processor  in parallel or Concurrently .
+		  A process contains many threads which are running on Multiple processors .
+		eg. In whatsapp when we are reading messages, parallely many threads like Status of different people,
+		 messages from different people ,sending a long video , sending a photo ,downloading a video or photo
+		all are threads which are running parallely on many or 1 processor.
+
+Nowadays a computer uses all Multi Programing, Multi Tasking , multi processing & multi threading  techniques combiningly
+
+https://www.geeksforgeeks.org/difference-between-multitasking-multithreading-and-multiprocessing/
+https://medium.com/@ayushranjan_63500/intro-to-multi-threading-4e700333efc1
+https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/
+
+Thread - It is small process(light weight process) which is a part of a process .
+	A process can have multiple threads .
+	All threads have there own program counters , registers,  stack.
+	ALL threads within a process share common memory of process.(but process have different memeory).
+	All threads within a process can communicate with each other very easily. 
+	( where as in process Inter Process Communication is very complex Mechanism )
+	Threads can be created very fastly ( where as creation of Process take time) 
+
+https://medium.com/computethecloud/operating-system-concepts-4dff340775ab
+
+

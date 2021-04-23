@@ -1,0 +1,46 @@
+7 layers of OSI model(Open System Interconnection)        5 Layers of TCP/IP Model
+ Physical Layer							Physical Layer	
+ Data Link Layer						Data Link Layer
+ Network Layer							Network Layer
+ Transport Layer						Transport Layer
+ Session Layer							Application Layer
+ Presentation Layer
+ Application Layer
+
+Please Do NoT StoP Applying 
+
+Life Cycle of Packet - When server sends data it passes through all 7 layers (Bottom to up) and 
+then at clients end again it passes through 7 layers ( top to bottom) all segments are reassembled again .  
+
+Hub - By it we can send data packets to all computers in a network so it is used for Broadcasting.
+	we cannot send packet to only one computer
+
+Switch - By it we can send data frames to particular computer device so it is used for Multicasting
+				( https://www.youtube.com/watch?v=ZvWn5xBflUs&t=11s )	
+Router - By it we can send Data packets to computer devices in other network.
+
+All computer devices connected to network are called Host 
+
+IP is address of Network 
+IP means IP Address has 2 types IPv4(32 bit)( Stable so mostly used ) & IPv6 (64 bit)(not stable so only 20% used)
+IP address of a network can be changed but it can be Static(when no need to change IP) Or Dynamic(changes again and again)
+IP address can be External IP Address Or Public IP(when ISP using DHCP server assigns IP address to Router i.e the Network)
+&  Internal IP Or Private IP (when Router assigns address to all devices in that network)
+
+https://medium.com/free-code-camp/computer-networks-and-how-to-actually-understand-them-c1401908172d
+
+DNS ( Domin Nmae System )is managed by your ISP (internet service provider)
+
+TCP(Transfer control Protocol) - used for error free transportation of packets     https://www.learnabhi.com/tcp-vs-udp/
+it sends data in serial manner & error checking , error recovery is done
+It is used to play stored videos, large data , email.
+TCP uses a three-way handshake to establish a reliable connection. The connection is full duplex, and both sides synchronize (SYN) and acknowledge (ACK) each other. The exchange of these four flags is performed in three steps—SYN, SYN-ACK, and ACK
+
+UDP(User Datagram Protocol) 
+It does not send data serial wise , error checking is done but not recovered(discards error packets )
+It is used to stream live videos , small data. 
+
+How data travels in TCP/IP model ( https://codeburst.io/learning-tcp-ip-protocol-suite-6947b601ea11 )
+https://www.geeksforgeeks.org/how-communication-happens-using-osi-model/
+
+https://www.google.com/amp/s/www.geeksforgeeks.org/devices-used-in-each-layer-of-tcp-ip-model/amp/
