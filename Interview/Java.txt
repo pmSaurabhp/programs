@@ -1,0 +1,15 @@
+Premitive data types-   char, int, float, Double, Bool
+	Predefined data types that cannot be modified by user
+	All have different size char < int < float < Double
+
+Non Premitive - String, Array, Class, Interface
+	These are reference type as they refer to an object and have functions which perform certain operations
+	User Defined Data types that can be modified by user
+	String is a Predefined data type (char type predefined) whereas 
+	in Arrays, Class  user defines the data types which it stores like int[] , char[]
+
+
+read string input from user			https://www.javatpoint.com/how-to-take-string-input-in-java
+	nextLine()	takes whole line as input means takes input till we press enter 
+	next()		takes input till space
+

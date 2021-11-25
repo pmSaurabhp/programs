@@ -1,0 +1,76 @@
+https://www.w3schools.com/html/html_css.asp
+comments	/*   text    */
+
+Combinators	space   decendent(child + sub child)		div p{  }
+		>	child					div > p{  }
+		+	next element				div + p{  }
+		~	all next elements			div ~ p{  }
+Box Model 
+ Margin		top  , right, bottom, left ( margin: auto   makes element center but only works when "width" is set)
+					  (if width not set use text-align: center)(to remove space betwn divs margin:-2px;)
+ Border         style, width, color          border-style property is must without it color and width property donot work
+ Padding	top  , right, bottom, left   
+ Content	width, height
+
+we cannot change color of margin its transparent 
+we can change color of padding by changing background-color
+
+Mor bar pani car
+
+text-align: center	used to align text when width is not set
+
+max screen width 1440px
+
+ width :300px      it makes the element static & no change when window is minimized  ( a horizontal scroll bar comes )
+ width : 50%       it makes the element responsive when window is minimized( phones ) and always is 50% of screen
+ max-width: 300px  it makes the element responsive when window is minimized under 300px (horzntal scroll bar does not come) 
+	      	   and contents are visible in small window without scrolling
+     		   do  max-width: 300px   in   https://www.w3schools.com/css/tryit.asp?filename=trycss_dim_max_width
+
+Total width = width + (left  + right padding) + (left + right border) + (left + right margin)
+Total height = height + (top + bottom padding) + (top + bottom border) + (top + bottom margin)
+
+* {  box-sizing: border-box;  /* use it so   Total width = width    for all elements           */
+  }                             border, padding , margin start filling the width inward direcion and if space is not 
+				there it expands out of width
+
+display:block           element starts from new line    ( /n div /n )  eg. div, h1, p, table, list, form
+display:inline		element starts from same line   (  <a>  )      eg. a, span, img, input, button
+			when block element is changed to display:inline width, height, top & bottom margin are not respcted 	
+
+display:inline_block	element starts from same line keeping height and width property
+			when block elemnt is changed to display:inline-block width, height, top & bottom margin are respcted 
+
+background      color, image, repeat, attachment(scroll, fixed), position(right top)
+  		background shorthand can be in any order
+
+position        (property   right, left, top, bottom, z-index, clip ) 
+static	    Normal position(default position) 
+relative    position shifts relative to its static position. Other content will not be adjusted to fit into any gap left by the element.
+absolute    position shifts relative to ancestor having relative position. Other content occupies gap left by the element. Absolute positioned elements are removed from the normal flow, and can overlap elements.
+fixed	    position fixed and gap is occupied by other elements
+sticky
+
+z-index (when overlaping happens we can set which element is in top)
+In case of overflow when an element position exceeds hight or width of parent element and overlaps the parents next element
+we use    overflow:auto    and scroll bars come.
+ To avoid scroll bar we should manually assign greater height or width
+
+
+float :left, right              used to make elements eg img to left or right of content
+   clear :left, right, both        used in next element, after element having float
+			
+ If an element is taller than the element containing it,
+ and it is floated, it will overflow outside of its container so we use
+  .clearfix::after {	 	
+	  content: "";
+	  clear: both;
+ 	  display: table;
+	}
+
+Flexbox		display: flex;			make child elements into a single row
+		flex-wrap:wrap;			wrap the elements into more rows
+		flex-direction:row or column	changes  
+		justify-content:		changes space between elements in horizonal direction
+		align-item:			
+		align-content:	 		changes space between elements in vertical direction

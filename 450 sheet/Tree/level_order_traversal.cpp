@@ -24,7 +24,7 @@ public:
             vector<int> temp;
             int n=q1.size();
 
-            for(int i=0;i<n;i++)   // for(int i=0;i<q1.size();i++)  wrong as q1.size() changes due to                                               q1.pop()
+            for(int i=0;i<n;i++)   // for(int i=0;i<q1.size();i++)  wrong as q1.size() changes due to pop()                                               q1.pop()
             {
                 temp.push_back(q1.front()->val);
 

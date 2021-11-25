@@ -1,16 +1,16 @@
+// i<j<k  a[k] < a[i] < a[j]
+// https://www.geeksforgeeks.org/count-of-triplets-in-an-array-i-j-k-such-that-i-j-k-and-ak-ai-aj/
 #include <bits/stdc++.h>
 using namespace std;
 
-
+// naive O( n^3 )
 int CountTriplets(int a[], int n)   // O(n^2)
 {
-
     // To store count of total triplets
     int ans = 0;
 
-    for (int i = 0; i < n; i++) {
-
-        // Initialize count to zero
+    for (int i = 0; i < n; i++)
+    { // Initialize count to zero
         int cnt = 0;
 
         for (int j = i + 1; j < n; j++) {

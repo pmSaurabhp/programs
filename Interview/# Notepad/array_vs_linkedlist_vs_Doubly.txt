@@ -1,0 +1,31 @@
+             arrays                       linked list
+1) pop/insert x :x<n  O(n)  	 | pop/insert befor x  is O(n) with singly but,O(1) for doubly linkedlist
+bin searh O(logn) + shifting O(n)|    insert in sort list is O(n) 
+				 | insertion in a sorted list is O(n)  as searching is O(n)
+
+2) binary search O(logn)   	 |  linear search O(n) ,Binary Search not possible 
+3)  unused space gets wasted  	 |  space is alloted only when needed 
+4) no extra space for pointers	 |  extra space for pointers
+5) Usage: arrays are used when   |  lists are used when n is not known and we need pop/insert 
+   n (no. of elements) is known  |  operation more than search operation
+    and we dont want pop/insert  |
+   operation but we need to      |
+  binary searching               |
+
+Singly link list is used for imlemetation of STACK and QUEUES as we need only Head and Tail elements 
+	for enqueu and deque O(1) will take but with arrays it would take O(n)
+
+ Doubly Linked List
+. Time Complexity of both singly and doubly is Same
+. Implementaion of delete operation is easier in DLL As in SLL we need to keep address of previous node in a new pointer
+. Dll is used at many places like
+1)  front and back navigation in Files
+2)  front and back navigation in websites
+3)  undo and redo operation in code editors
+
+Circular link list
+ 		https://www.geeksforgeeks.org/circular-linked-list/
+It donot have any NULL node
+It can be made doubly or singly
+it is used in implement queue 
+and slice time scheduling for process

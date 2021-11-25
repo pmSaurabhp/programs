@@ -1,9 +1,31 @@
-
+// i<j<k  a[i] < a[j] > a[k]
 #include <iostream>
 #include <vector>
 using namespace std;
+void t_sum(int arr[],int n)  // O( n^2 )
+{  int ans=0;
+    for (int i = 1; i < n - 1; ++i) {
+        int left=0,right=0;
 
-int triplet(long long int arr[],int i,int n,vector<long long int> store)
+        // find maximum value(less than arr[i])
+        // from 0 to i-1
+        for (int j = 0; j < i; ++j)
+            if (arr[j] < arr[i])
+                left++;
+
+        // find maximum value(greater than arr[i])
+        // from i+1 to n-1
+        for (int j = i + 1; j < n; ++j)
+            if (arr[j] < arr[i])
+                right++;
+
+        ans += left*right;
+    }
+    cout<<ans;
+
+}
+
+int triplet(int arr[],int i,int n,vector<int> store) // // O( 2^n )
 {
     if(i==n+1)
      return 0;
@@ -28,28 +50,7 @@ int triplet(long long int arr[],int i,int n,vector<long long int> store)
          j=triplet(arr,i+1,n,store);
  return k+j;
 }
-void t_sum(int arr[],int n)
-{ int ans=0;
-    for (int i = 1; i < n - 1; ++i) {
-
-
-        // find maximum value(less than arr[i])
-        // from 0 to i-1
-        for (int j = 0; j < i; ++j)
-            if (arr[j] < arr[i])
-                ans++;
-
-        // find maximum value(greater than arr[i])
-        // from i+1 to n-1
-        for (int j = i + 1; j < n; ++j)
-            if (arr[j] > arr[i])
-                ans;
-
-    }
-    cout<<ans;
-
-}
-void t_sum_n_cube(int arr[],int n)
+void t_sum_n_cube(int arr[],int n)  // O( n^3 )
 {
     int c=0;
     for(int i=0;i<n;i++)
@@ -64,7 +65,7 @@ void t_sum_n_cube(int arr[],int n)
         }
 
     }
-    cout<<c;
+    cout<<c<<"\n";
 }
 int main()
 {
@@ -75,6 +76,6 @@ int main()
     t_sum(arr,n);
     cout<<"\n";
     t_sum_n_cube(arr,n);
-   // vector<long long int> store;
-   // cout<<triplet(arr,0,n,store);
+    vector<int> store;
+    cout<<triplet(arr,0,n,store);
 }

@@ -1,0 +1,6 @@
+ForeignKey = Many to one 
+
+CreateView has form_valid(self,form)
+UpdateView has test_func(self)
+ListView has get_queryset(self) 
+detailView has get_object(self)

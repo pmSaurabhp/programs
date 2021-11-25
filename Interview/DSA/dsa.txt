@@ -1,15 +1,19 @@
 What is data-structure?
- A Data Structure is a way of definung , storing and retrieving data in a sytematic manner.
+ A Data Structure is a way of storing, retrieving and deleting data .
 
 What is asymptotic analysis of an algorithm?
- Asymtotic Analysis refers to mathematical boundation of runtime of an algorithm.
-Using asymptotic analysis we can predict the worst , best and average case of an algorithm.
+ Asymtotic Analysis refers to find the mathematical boundation of runtime of an algorithm.
+It is a performance parameter by which we can predict the worst , best and average case of an algorithm.
 
 What are asymptotic notations?
 Best case is represented by Ω(n) notation.
 Worst case is represented by Ο(n) notation.
 Average case is represented by Θ(n) notation
 
+linear search O(n) is better than Binary search (nlogn) when array is not sorted
+Binary search    O( logn ) when array is sorted
+ 		 O(n*logn) when array not sorted
+ 
 What is Greedy approach?
  In a greedy algorithm we take a greedy choice i.e. choosing a locally optimal solution 
 that may or may not lead to  globally optimal solution
@@ -20,17 +24,35 @@ In divide and Conquer algorithm we recursively divide the problem into 2 or more
 they get easily solved  and then combine results of these sub problems to get the solution of original problem.
 
 What is merge sort ?
-Merge sort algorithm is based on Divide and conquer approach as it divides the array in 2 sub halfes untill untill 
+Merge sort algorithm is based on Divide and conquer approach as it divides the array in 2 sub halfes untill  
 only 1 element remains and then merge the sub array in sorted order .
 the worst , average and best case time complexity is O(n logn)
 
 what is quick sort?
-Quick sort is based on Dac approach as it selects a pivot element and make all elemnts less than pivot to right of it and 
+Quick sort is based on D&C approach as it selects a pivot element and make all elemnts less than pivot to right of it and 
 all elments greater than pivot to right of it this divide the array  into 2 parts and then repeat this proceess independently 
 in left and right part untill 1 element remains .
 the worst case tc is O(n^2) and average case is O(n logn)
-    
+
+Heap - 4 properties of Heap
+1) Its not a Binary search tree ( parent > left & right     left > right || right > left both are valid) 
+2) Complete Binary Tree ( node values are stored in a array )( left =2*i+1  right=2*i+2  parent= (node-1)/2 lower bound )
+3) height = log(n)  (because of Complete binary tree)
+4) Balanced	  (because of Complete binary tree)
+Search	O(n) 	as we don't know which to go left or right
+Insert	always inserted at last index of array 	O(logn)
+Delete	only be applied on root node 		O(logn) as we swap root with last element and then do further swaps
+Heap Sort    perform delete operation n times	O(nlogn)
+
+
+Priority Queues
+
+
 what is difference between graphs and tree?
+In Tree we have concept of parent and child such that a child can have only one parent and  
+  a node is connected to other node by one and only one edge and all edges are directional.
+but in case of Graph we have Vertices and edges and a vertex can be connected to other vertex by many number of edges
+and edges can be directional and bidirectional.
 A tree is a special type of graph i.e. a tree is a Directed Acyclic Graph where each node has atmost 1 parent where as
 in a graph a node can have multiple parents and links can be directed or undirected.
 TREE has n nodes and n-1 edges
@@ -46,7 +68,7 @@ A tree  is a graph where edges = V-1    T(n)= O(V+V-1) = O(V)   ( Inorder , Preo
 
 what is bfs?
 in BFS or level order traversal we start from root node and explore all neighbouring nodes at present deph 
-and then go to next depth and repeaat this process. 
+and then go to next depth and repeat this process. 
 We use QUEUE to store unvisited Vertex , dequeue it & push_back all its adjacent unvisited nodes & repeat.
 Time complexity O( V + E) as we go to each vertex and store all its edges     
  v1 +v2+v3 ...    + (# of v1 edges)+(# of v2 edges)+(# of v3 edges)..... = V + E
@@ -57,3 +79,12 @@ Connected  - if from every vertex we can reach to every other vertex
 What is Spanning tree?
 A spanning tree is a tree made from given graph having minimum no. of edges and connecting  all vertices.
 A complete graph can have maximum n^(n-2) number of spanning trees.
+
+AVL vs Red Black Trees
+AVL 			is used when frequent searching is required and it is more balanced than RBT
+Red Black Trees		is used when frequent insertion, deletion is required 
+
+Red Black Trees	
+	1) root and nil nodes are black
+	2) red cannot have red parent or child but black node can have black parent or child
+	3) Every path from a node to its NIL descendents have same number of black nodes ( this balances the tree)

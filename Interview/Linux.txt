@@ -1,0 +1,54 @@
+https://www.crio.do/learn/home/me/ME_LINUX1/ME_LINUX1_MODULE_BYTE1
+
+						/  (root)
+home	bin	boot	sbin	usr	var	dev	etc	opt	media	lib	proc
+
+.	present directory
+..	parent directory
+
+cd /	change directory to root
+cd ~  (or cd )	move to home		(home contains all users data)
+cd ..	move to parent directory
+cd -	move to previous directory
+
+cd /home/crio-user/Downloads/videos/series/english/got/season100/episode2    	absolute path
+cd /season100/episode2		relative path  (when pwd is   got)
+
+pwd	present working directory
+ls	list all directories and files
+tree	to display file hierarchy
+
+mkdir	to create directory
+touch	to create a new file
+nano	to edit a file (after editing file press Ctrl + x to save then hit y to confirm 
+			then press Enter as we donot want to change file name )
+cat		to print contents of file
+./file_name	to run executable file		( ./new.sh )
+
+chmod	change permissions 
+	for eg. $ls -l
+		-rw-r--r--  1   user  user  size   modification_date   file_name
+		drwxr--r-x  1   user  user  size   modification_date   file_name
+	(- shows file & d shows directory) owner   group   other   1   user  user  size   modification_date   file_name
+	
+	chmod +x file_name	add executable permission
+	chmod g-w file_name	remove write permission from group
+	chmod 444 filename	add read permission
+
+rm		   to remove a file
+rmdir (or rm -fs)  to remnove a directory
+
+man command_name	manual shows functioning of command, there flags
+
+cp path_file1 path_file2	copy file1 at path_file1 to path_file2
+rm path_file			remove file
+mv path_file1 path_file2	move file1 at path_file1 to path_file2
+
+grep pattern file	find pattern in a file
+awk '{print $2}' file   output 2nd word in line
+ 
+>	redirects output of one command to a file
+	eg.   echo "echo 'Congratulations on running a bash script'" > run.sh
+		run.sh contains 	echo 'Congratulations on running a bash script'
+
+command_1 | command_2	piping output of one command as input of other command

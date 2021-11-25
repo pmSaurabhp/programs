@@ -3,7 +3,7 @@
 // n using Sieve of Eratosthenes
 #include <bits/stdc++.h>
 using namespace std;
-
+#define int long long
 void SieveOfEratosthenes(int n)
 {
 
@@ -23,24 +23,24 @@ void SieveOfEratosthenes(int n)
             // Update all multiples
             // of p greater than or
             // equal to the square of it
-            // numbers which are multiple
-            // of p and are less than p^2
-            // are already been marked.
+            // numbers which are multiple of p .
+            //
+            //  less than p^2 are already been marked.
             for (int i = p * p; i <= n; i += p)
                 prime[i] = false;
         }
     }                                         // T(n) = O( n*log(log(n)) )
 
     // Print all prime numbers
-    for (int p = 2; p <= n; p++)
-        if (prime[p])
-            cout << p << " ";
+//    for (int p = 2; p <= n; p++)
+//        if (prime[p])
+//            cout << p << " ";
 }
 
 // Driver Code
-int main()
+int32_t main()
 {
-    int n = 30;
+    int n = 1000000;
     cout << "Following are the prime numbers smaller "
          << " than or equal to " << n << endl;
     SieveOfEratosthenes(n);

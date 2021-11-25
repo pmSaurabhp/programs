@@ -1,0 +1,47 @@
+vector<>  	push_back() pop_back() erase() 
+string<>  	push_back() pop_back() erase()
+stack<>		push()	    pop()	top()
+queue<>		push()	    pop()
+unordered_map<>	insert() or umap[value] erase()   find() end()	 printed only with iterator umap.begin() umap.end()
+
+sort(v.begin(), v.end(), compare) 
+	bool compare(same data type as v : v1 , same data type as v :v2 ) 
+	{ return v1.val > v2.val;  }        			for descending order
+
+
+when calling fun(arr);
+int fun(int b[])  or int fun(int *b) 
+b is just a pointer , it is pass by reference   
+
+in c++ we cannot do pass by value for array all array are pass by reference  void fun(int arr[])    call  fun(arr) 
+for Vectors we can do both pass by value      void fun(vector<int> vect)
+ 		       and pass by reference  void fun(vector<int> &vect)
+
+ascii value its char value are interchangeable
+a[i]=101  // 'd'
+
+%s  reads input until a whitespace, \n , eof (\0)
+gets() reads input until \n,eof
+
+ scanf("%s",a);  doesnot take -ve values
+while(scanf("%d",a))  takes input till esc notpress
+  
+int a[1000];
+for(i=0;i<10;i++)
+{ a[i]=i; }
+strlen(a);       gives strlen(a)=1  
+
+while(1)  while(-1) while(290)    true
+while(0)   false
+
+int range 10^9
+long int  ->  %ld  (in windows long int & int are same)
+long long int range 10^20
+
+ int n;      it works only in c/c++ that to in 
+cin>>n;    latest version of c/c++
+int a[n];    not in turboc
+
+array/vector can hold 4gb of data in cpp
+
+

@@ -1,0 +1,10 @@
+HtML	CSS	JavaScript
+Mongodb
+Node
+TypeScript
+Angular
+Social Engineering
+Microservices
+Webpack
+Jenkins
+Karma & Jenkins

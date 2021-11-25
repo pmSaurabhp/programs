@@ -1,0 +1,94 @@
+In JavaScript we have Number, String, Boolean , Object            all start with CAPITAL
+ 
+we use let, Const    ( var   was used before 2015 but it is still used in old websites )
+a=10  			does not has let / const keyword still it will work but it can create problems in future so avoid it    
+
+'use strict'	it makes some error visible 
+		like if we make a variable 	let myname='sks'
+						if(my_name==='sks')  console.log("true"); 	then it will not show any error
+						but with strict mode on 		an error that my_name is not defined will show in console 
+						
+Type Conversion   let a="1234";
+		      a=Number(a);
+
+Type Cohesion   let a = '14' - '10'        output  4     ( Type Number )             
+		    a = '14' + '10'        output  1410  ( Type String )    
+		    a = '14' - '10' + '5'  output  9     ( Type String )
+		    a = '14' * '10'        output  140   ( Type Number )
+		    
+	        let a = '1'+ 1;
+		    a = a - 1;          
+		output  10   ( Type Number ) 
+		for - , * , / , conditional operator    we get Number   and for  +  we get String
+
+'a'.charCodeAt(0)		converts 'a' to ASCII value
+String.fromCharCode(97)		converts ASCII value to Character
+
+eg. Capitalize a character
+	car='d'
+	car = String.fromCharCode('A'.charCodeAt(0) +car.charCodeAt(0)-'a'.charCodeAt(0))
+	output   car = 'D'
+   or	
+	car = car.charAt(0).toUpperCase()
+
+ ===    Strict equality   18 === 18   True      we always use this
+ ==     loose            '18'== 18    True      it has type cohesion  
+ 
+False     if(0)  if('')  if(undefined)  if(NaN)  if(null)		!0 , !'' = true	
+
+Template Literal    we use this  sign  `  `
+ 	let name = "	Sks";
+	console.log( `Hello  ${name}  we use template literals to print exact what is inside 
+			otherwise we have to use + operator to join and add proper space and 
+			otherwise use \n\ to change line 
+		   `)
+Ternary operator  (three operators)( one line if else )
+        let age = 23;
+	let b = age >= 18 ? 'Drink' : 'No Drink';
+	console.log(b);          output    Drink
+
+
+Functions 	can be made in 3 ways in javaScript
+		Function Declaration		function test(a,b){ some code }			test(4,10)
+		Function Expressions		const test= function (a,b){ some code )		let x=test(4,10)
+		Arrow functions			const test= (a,b) => a-b ;			let x=test(4,10)	
+						const test= (a,b) => { some code  return}	let x=test(4,10)
+	
+Pass By Value	all primitive data type
+Pass By Value	Arrays  and  Object 
+(  https://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference )
+
+string		In javaScript strings are immutable
+		so to change ith element of string 
+			chr ='x'
+			str=str.slice(0,i) + chr + str.slice(i+1);
+		str.slice(0,4)		returns a string from 0  index to 3rd index of str
+		str.slice(5)		returns a string from 5th index to last index of str
+
+Array		let arr = ['sks',23,'saurabh'];			a array in JavaScript can hold differnt data types at one time 
+	or	const arr = new Array('sks',12,'saurabh');		if we do arr.push(34) its legal		but if we do arr=['mmm',34] not legal because of const
+		
+		arr.push(34)		push element at last		returns index of element
+		arr.unshift(34)		push element at first
+		arr.pop()		pop element at last		returns element deleted
+		arr.shift()		pop element at last
+		
+		arr.indexOf('saurabh')	o/p	2		arr.indexOf('sksksk')	o/p	-1
+
+Objects		let obj_list = {
+			first :'Saurabh',
+			last :'Sahu',
+			birthyear :23,
+			friends : ['aaa','bbb','cccc']
+			
+			calage: function(){						// function Expression is used   &  function Declaration cannot be used
+				return console.log(2021 - this.birthyear)
+				}
+
+			};
+	
+		To access elements 	   	obj_list['first']	or 	obj_list.first 
+		To make a new data member	obj_list.hobbies = ['games','books','coding']	or   obj_list['hobbies']=
+		to make a new member function	obj_list.fun = function (){ some code }
+
+

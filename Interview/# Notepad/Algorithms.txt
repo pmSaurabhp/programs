@@ -1,0 +1,28 @@
+
+selection sort - the smallest no. is selected and put inthe right place
+2) inner iteration is made in unsorted list
+
+insertion sort - next element is selected and  inserted into the sorted list  
+2) iteration is made in sorted list
+
+incremental agorithm 
+insertion sort
+
+Divide and Conquer
+Tower of Hanoi
+binary search
+Merge sort
+quick sort
+count No. of Inverse
+
+
+greedy algo
+selection sort
+fractional knapsack
+
+   quick sort(problems)
+1. average case O(nlogn) & worst case O(n^2)
+2. worst case - whn equal partitns ar nt mde 
+3. randomised pivot selection can solve this
+4. memory complexity can be decreased by removing tail recursion
+5.combination of quick sort & heap srt is usd

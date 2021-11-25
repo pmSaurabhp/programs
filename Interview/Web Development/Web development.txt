@@ -1,0 +1,36 @@
+GET	When we want to retieve data from database ( idempotent )
+POST	When we want to create new data in database (if we make same POST request twice 2 different user are created)
+PUT	When we want to update data in database ( idempotent means if we make same PUT reqst twice new user is not creatd)
+
+What is a Framework ?
+A software that makes developement work easy i.e. a developer does not need to code repetitive tasks from scratch . 
+eg. using Bootstrap framework for css and js is used for making responsive web apps makes things like making nav bar,
+	 hamburger button, jumbotron container very easy to make without writing code for css and js
+ 
+Django(of python), Laravel(of PHP) etc make Backend Web developement easy like both have settings file in which we can 
+change the DBMS (sqlite, Mysql, Oracle etc) with one word i.e. we do not have to write different queries if we change DBMS
+CRUD operations in views and user authentication   are made very easy.
+
+https://hackr.io/blog/what-is-django-advantages-and-disadvantages-of-using-django
+https://impressit.io/blog/best-backend-frameworks/
+
+
+Framework vs Libraries :         https://www.geeksforgeeks.org/software-framework-vs-library/
+Your Code  calls the funtion (of Library)
+Framework calls your code  ( and then code calls the library)  
+
+MVC ( Model View Controller )         https://www.codecademy.com/articles/mvc
+MVC model is a way of Development (organizing program files ) in which frontend developers and backend developers 
+can work parallely .
+Earlier sql Queries and and other commands were written in same file.
+Model : this file contains architecture of data and real world entities
+View : It contains functions which interact with user
+Controller : controls flow of data between Model and View
+
+
+MVT (Model View Template )
+MVT is a Django variation of the famous MVC Model.
+Templates : it contains HTML files
+There’s an object-relational mapper built-in to Django (the Model), 
+a system for processing HTTP requests with a built-in templating engine (the View), and a URL dispatcher (the Controller).
+

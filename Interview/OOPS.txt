@@ -1,0 +1,37 @@
+Class	It is a blueprint that contains data members and member functions
+Object  It is an instance of a class so it takes data memebers and functions from class 
+	and then memory gets allocated to object
+ 
+Features of OOPS
+	Abstraction
+	Encapsulation
+	Inheritance
+	Polymorphism
+
+Abstraction    It is a technique by which unnecessary details is hided and only important information is shown to the user
+		For eg. we use pow() or sort()  without knowing there implementation details.
+
+Encapsulation  It is a process by which data and function is binded together into a single unit 
+		provide security by help of access specifiers.
+Inheritance    It is a technique by which a child class is created using another class so that the child class 
+		has properties of parent class.
+		Inhertance helps in code reusability
+
+Polymorphism   It is a technique by which a function behaves differently under different circumstances
+
+Compile time polymorphism ( Function Overloading  and  Operator overloading) 
+	   It is technique by which many functions can have same name 
+	   but with different data types and number of arguments and it happens at compile time
+Runtime Polymorphism  ( Function Overriding      with help of virtual keyword)
+		When a child class has defined same function name as in Parent class
+	
+Structure Vs Class
+	A structure in C is just a group of data and no other class like features like functions,Abstraction,inheritance 
+	
+	A structure in C++ is similar to Class but default access specifers is public 
+	
+	A Class has default access specifier as private
+
+
+
+		 

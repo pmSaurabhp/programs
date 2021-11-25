@@ -1,0 +1,9 @@
+java 
+selenium (frontend UI)
+rest assured
+postman
+cucomber
+appium  (apps)
+jmeter	(performance)
+cypress	(competitor of selenium)
+

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>		it is used so that bowser renders webpage in Standard Mode if not then Quirks Mode is used
+			Standard Mode renders page according to W3C standards
+			if not used some pages will be displayed differently 
+ 
+<a href="xyz.html">xyz</a>    (anchor tag )
+
+<img src="c:/location/xyz.jpg" >
+<link rel="stylesheet" href="c:/location/xyz.css">
+
+<script src="c:/location/xyz.js"></script>
+
+<table>
+  tr    table row
+  th	table header
+  td	table data
+</table>
+
+why css in head and js in bottom of body ?
+https://www.edureka.co/community/62788/generally-position-between-head-head-script-just-before-body
+
+h1	has default margin ,bold,size
+p	has default top & bottom margin
+div	does not has any default margin
