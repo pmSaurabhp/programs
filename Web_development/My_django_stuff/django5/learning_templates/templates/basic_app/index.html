@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}   <!-- always on top -->
+
+ {% load my_extras %}               <!-- custom_filter -->
+                                    <!-- necessary to load new module my_extras  -->
+                                   <!-- in settings.py under INSTALLED_APPS 'basic_app.templatetags' should be present -->
+  <head>
+    <meta charset="utf-8">
+    <title>HOMEPAGE</title>
+  </head>
+
+   {% block body_block %}
+
+     <h1>HOMEPAGE</h1>
+    <h1>This is an example of template inheritance</h1>
+    <p>Go to</p>
+    <a href='{% url 'basic_app:relative' %}'>RELATIVE page</a>
+    <h1>{{text|upper}} changes to</h1>
+
+    <h1>{{ text|custom_filter:'o' }}</h1>
+
+    <h1>{{number|add:"50"}}</h1>
+
+  {% endblock %}

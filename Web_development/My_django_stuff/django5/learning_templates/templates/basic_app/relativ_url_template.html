@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}
+ {% block body_block %}
+
+    <p><a href='{% url 'basic_app:other' %}'>Other page</a> </p> <!--  url keyword -->
+    <p><a href="{% url 'admin:index' %}">ADMIN Page</a>    </p>   <!-- admin page is predefined and has function name index -->
+    <a href="{% url 'index' %}">HOMEPAGE</a>
+{%endblock%}

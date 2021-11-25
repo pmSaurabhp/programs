@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/inventory.css' %}">
+{% endblock%}
+{% block content%}
+<h1 style='text-align:center'>My Cart</h1>
+  {% for i in object %}
+  <div class="jumbotron cartlist">
+
+    {% for j in i.products.all %}
+
+      <p id='cartlist'><strong><a href="{% url 'cartdetail' pk=i.pk %}">{{j.product_name}}
+                </a></strong>  {{  i.purchase_date}}</p>
+
+
+    {% endfor%}
+
+  </div>
+
+  {% endfor%}
+
+{%endblock%}

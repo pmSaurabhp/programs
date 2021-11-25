@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+.startdate{
+
+	background: url(../../images/icon_Set01.svg) no-repeat -22px -21px;
+	width: 42px;
+	height: 33px;
+	display:inline-block
+	
+
+	}
+	
+.enddate{
+
+	background: url(../../images/icon_Set01.svg) no-repeat -22px -64px;
+	width: 42px;
+	height: 34px;
+	display:inline-block
+
+	}
+	
+.Score {
+	background: url(../../images/icon_Set01.svg) no-repeat -26px -109px;
+	width: 34px;
+	height: 30px;
+	display:inline-block
+}
+
+
+.pass {
+	background: url(../../images/icon_Set01.svg) no-repeat -28px -149px;
+	width: 30px;
+	height: 30px;
+	display:inline-block
+}
+
+.download {
+	background: url(../../images/icon_Set01.svg) no-repeat -34px -224px;
+	width: 17px;
+	height: 14px;
+	display:inline-block;
+	 margin-right: 4px;
+    position: relative;
+    top: 2px;
+}
+.report{
+	
+	background: url(../../images/icon_Set01.svg) no-repeat -35px -195px;
+	width: 16px;
+	height: 18px;
+	margin-right: 4px;
+    position: relative;
+    top: 2px;
+	display:inline-block}
+	
+.comments{
+background: url(../../images/icon_Set01.svg) no-repeat -34px -247px;
+	width: 17px;
+	height: 17px;
+display:inline-block}	
+
+.video{
+	background: url(../../images/icon_Set01.svg) no-repeat -35px -277px;
+	width: 17px;
+	height: 11px;
+	display:inline-block}
+

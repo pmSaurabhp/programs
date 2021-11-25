@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container">
+        <ul class="navbar-nav mr-auto">
+          <li class='navbar-brand'><a href="{% url 'home' %}">HOME</a></li>
+          <li class='navbar-brand'><a href="{% url 'app1:list' %}">Schools</a></li>
+          <li class='navbar-brand'><a href="{% url 'admin:index'%}">Admin</a></li>
+
+        </ul>
+      </div>
+    </nav>
+
+    {% block body_block %}
+    <!-- Anything outside this can be inherited! -->
+    <!-- shortcut ctrl + / -->
+    {% endblock %}
+
+  </body>
+</html>

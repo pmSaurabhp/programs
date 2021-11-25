@@ -1,0 +1,17 @@
+.cartlist + .jumbotron {
+  padding-top: 0%;
+  padding-bottom:0%;
+  margin:4px 300px 0px 20px;
+}
+body {
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 18px;
+}
+strong{
+  font-size:30px;
+  color:red;
+}
+#cartlist{
+  font-size: 12px;
+
+}

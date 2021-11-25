@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block content%}
+<form enctype='multipart/form-data' method="post">
+  {% csrf_token %}
+
+  <img src="{{ object.product_img.url }}" >
+  <p>Product : {{object.product_name}}</p>
+  <p>Seller : {{object.seller_name}}</p>
+  <p>No. of pieces left : {{object.product_count}}</p>
+  <h3>Amount : {{object.product_cost}}</h3>
+  <p></p>
+
+<button type="button" name="Buy"><a href="{% url 'pay' pk=object.pk %}">Buy</a></button>
+</form>
+{%endblock%}

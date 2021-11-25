@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% block content%}
+
+  <h2>Buyer : {{object.buyer_name}}</h2>
+  <p>Purchased on : {{object.purchase_date}}</p>
+  {% for i in object.products.all %}
+  <img src="{{ i.product_img.url }}" >
+  <p>Product : {{i.product_name}}</p>
+  <p>Seller : {{i.seller_name}}</p>
+
+  {%endfor%}
+
+
+
+
+{%endblock%}

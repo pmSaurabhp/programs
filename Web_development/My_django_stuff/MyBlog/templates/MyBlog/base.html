@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="{% static 'css\blog.css' %}" />
+  </head>
+  <body>
+    <header>
+     <h1 class='class-left'><a href="{% url 'home' %}">MyBlog</a></h1>
+
+    {% if user.is_authenticated %}
+
+   <p class='class-left'>Hi {{user.username}}</p>
+
+    <p class="class-right"><a href="{% url 'logout' %}">Logout  </a></p>
+    {% else %}
+    <p class="class-right">
+      <a href="{% url 'login' %}">Login  </a>  </p>
+      <p class="class-right">  <a href="{% url 'signup' %}">SignUp</a></p>
+
+
+    {% endif %}
+    <p class="class-right"><a href="{% url 'create' %}">New Post</a></p>
+
+</header>
+    {% block body%}
+    {%endblock%}
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{% extends 'MyBlog\base.html' %}
+{% block body%}
+<h1>Home Page</h1>
+{% for i in object %}
+<h1><a href="{% url 'detail' pk=i.pk %}">{{i.title}}</a></h1>
+{%endfor%}
+{% endblock %}

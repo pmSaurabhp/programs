@@ -1,0 +1,244 @@
+@font-face {
+    font-family: "OpenSans-SemiBold";
+    src: url('/EForms/fonts/OpenSans-Semibold.ttf') format('opentype'), url('/EForms/fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype');
+}
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url('/EForms/fonts/OpenSans-Regular.ttf') format('opentype'), url('/EForms/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face{font-family:'FontAwesome';src:url('/EForms/fonts/fontawesome-webfont.eot?v=4.7.0');src:url('/EForms/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),url('/EForms/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('/EForms/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('/EForms/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('/EForms/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+
+@font-face {
+ font-family: 'Glyphicons Halflings';
+	src: url('/EForms/fonts/glyphicons-halflings-regular.eot');
+	src: url('/EForms/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),  url('/EForms/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/EForms/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg')}
+
+@font-face {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/EForms/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("/EForms/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("/EForms/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("/EForms/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("/EForms/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+.panel-body{
+	padding:0px!important;
+}
+.universityLogo~h2{
+       font-size: 24px;
+        margin: 30px 0 5px 60px!important;
+        font-size: 24px;
+        white-space: normal!important;
+    }
+    .universityLogo~h3{
+        margin-left: 60px;
+    }
+    .universityLogo{
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
+.listbannerarea1 .container-fluid{
+    padding: 0;
+    }
+.listbannerarea {background: url(../../../images/onlineAppForm/form61194/Banner.jpg) left top no-repeat!important; padding: 25px 0; background-color: #0e3c73; background-size: cover; background-position: center center !important; background-repeat: no-repeat !important; color: #fff; height: 143px; background-size: 100% 143px;!important }
+.listbannerarea1 {
+		height: auto;
+		font-family: OpenSans-semiBold;
+		padding: 16px 10px;
+	}
+	.listbannerarea1 {
+    padding: 5px 0;
+    background-color: #444d82;
+    color: #fff;
+    height: auto;
+}
+	
+.customSemforTableClassOnView
+{
+    
+    font-size: 14px;!important
+    position: relative;
+    font-family: OpenSans-Regular;
+    background-color: #f9f9f9;!important
+    padding: 10px;
+    margin-top: 3px;
+    font-family: sans-serif !important;
+    font-weight: normal!important;
+}
+.pop {
+    display: none;
+    position: fixed;
+    z-index: 1200; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(140, 140, 140);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.pop-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width:  300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.pop-footer {
+    padding: 10px;
+   	background-color:#e6e6e6; 
+}
+.uploadedImageCustomCss
+{
+    background-size: cover;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    color: #fff;
+    height: auto;
+    cursor: pointer;
+    /* background-color: #3C3267; */
+}
+@media only screen and (min-width : 992px) {
+	/* #Photo_id_divContainer
+	{
+		    margin-top: -10%;
+            width: 15%;
+	} */
+}
+.uploadedSignCustomCss
+{
+    background-size: cover;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    color: #fff;
+    height: auto;
+    cursor: pointer;
+}
+.image {
+  opacity: 1;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.uploadImageLinkCss {    
+  
+  font-weight: bold; 
+  z-index: 10;
+  cursor: pointer;
+  left: 50%;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 70%;
+}
+.customOneFieldDivClassPhoto:hover .imagePhoto {
+  opacity: 0.3;
+}
+.customOneFieldDivClassSign:hover .imageSign {
+  opacity: 0.3;
+}
+.customOneFieldDivClassPhoto:hover .uploadImageLinkCss {
+  opacity: 1;
+}
+.customOneFieldDivClassSign:hover .uploadSignLinkCss {
+  opacity: 1;
+}
+.uploadSignLinkCss
+{
+  margin-top: 10%;
+  left: 50%;
+  font-weight: bold; 
+  z-index: 10;
+  cursor: pointer;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;	
+}
+
+.header {
+	background:url(../../../images/onlineAppForm/form58592/banner2.jpg) no-repeat top left;
+	height:127px;
+	text-align:right;
+	font-size:20px;
+	font-weight:bold;
+}
+a.showMoreLessClass:link {
+    text-decoration: none;
+}
+
+a.showMoreLessClass:visited {
+    text-decoration: none;
+}
+
+a.showMoreLessClass:hover {
+    text-decoration: underline;
+}
+
+a.showMoreLessClass:active {
+    text-decoration: underline;
+}
+.showMoreLessClass
+{
+font-weight: bold;
+}
+.customSemClassOnView
+{
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    font-family: OpenSans-Regular;
+    background-color: #e5e5e5;
+    padding: 10px;
+    margin-top: 3px;
+}
+ .pop {
+    display: none;
+    position: fixed;
+    z-index: 1200; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(140, 140, 140);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.pop-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width:  300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.pop-footer {
+    padding: 10px;
+   	background-color:#e6e6e6; 
+}
+.tabtext span{
+	color: #333 !important;
+}
+	

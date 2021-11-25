@@ -1,0 +1,86 @@
+function loadHorizontalTabs() {
+
+
+        //li click event
+
+        $('.tabLi li').click(function() {
+			
+		
+            $(this).addClass('active').siblings().removeClass('active');
+
+        });
+      /* For moile scroll top */
+        $('.scrollTop').click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+
+        })
+    /* accordions arrow change */
+
+        $('.dashboardaccordions').on('hide.bs.collapse', function(e) {
+            $(e.target).prev('.panel-heading').find('.accordionArrow').addClass('fa-angle-down')
+            $(e.target).prev('.panel-heading').find('.accordionArrow').removeClass('fa-angle-up')
+            $(e.target).prev('.panel-heading').removeClass('activehead');
+        })
+
+
+
+        $('.dashboardaccordions').on('show.bs.collapse', function(e) {
+            $(e.target).prev('.panel-heading').find('.accordionArrow').removeClass('fa-angle-down')
+            $(e.target).prev('.panel-heading').find('.accordionArrow').addClass('fa-angle-up')
+            $(e.target).prev('.panel-heading').addClass('activehead');
+
+        })
+
+
+		/* reponsive tab */
+        $('.demoForResponsiveTabs').bootstrapResponsiveTabs({
+            minTabWidth: 180,
+            maxTabWidth: 250
+        });
+		
+		
+		$('#CreateModal').on('shown.bs.modal', function () {
+			 $('.demo1').bootstrapResponsiveTabs({
+			  minTabWidth: 30,
+			  maxTabWidth: 220
+			});
+		})
+		
+		
+		
+        $('.tabDropdowns').on('show.bs.dropdown', function() {
+			
+            $('.project-overlay').show()
+
+        })
+        $('.tabDropdowns').on('hidden.bs.dropdown', function() {
+            $('.project-overlay').hide()
+
+        })
+
+        
+		/* alert */
+		
+		$('.notify .close').click(function() {
+            $('.notify').removeClass('shownoti')
+        })
+
+
+    
+
+
+
+
+    } // JavaScript Document
+	
+	    function shownoti(text) {
+
+            var msgText = text
+            $('.notify > span').text(msgText)
+
+            $('.notify').addClass('shownoti')
+            $('.notify').css("right", "10px");
+        }

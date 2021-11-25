@@ -1,0 +1,12 @@
+.class1{
+color:#47e835;
+}
+.class2{
+color:red;
+}
+#id1{
+color:violet;
+}
+#id1+h1{
+color:yellow;
+}	

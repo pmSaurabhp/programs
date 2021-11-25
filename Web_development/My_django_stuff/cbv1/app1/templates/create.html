@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% if form.instance.pk %}
+    UPDATE school
+    {% else %}
+    CREATE School
+    {% endif %}
+    <h1>
+      <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" class='btn btn-primary' value="Submit">
+
+      </form>
+    </h1>
+  </body>
+</html>

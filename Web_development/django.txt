@@ -1,0 +1,16 @@
+functioning of Django 
+when a url is entered django checks if it is present in urls.py file 
+& if it is present the view associated with matched url will execute
+& this view contains models class & template_name i.e html file  which will opens
+
+to input data we can create forms.py file or use fields keyword in class(inheriting CreateView or UpdateView)
+ of models.py file
+     
+
+
+ForeignKey = Many to one 
+
+CreateView has form_valid(self,form)               these functions are called on there own 
+UpdateView / DeleteView has test_func(self)
+ListView has get_queryset(self) 
+detailView has get_object(self)

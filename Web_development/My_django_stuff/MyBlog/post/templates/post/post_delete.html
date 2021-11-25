@@ -1,0 +1,9 @@
+{% extends 'MyBlog\base.html'%}
+{% block body%}
+<h2>confirm delete </h2>
+<form class="" method="post">
+  {%csrf_token%}
+  <input type="submit" name="" value="Confirm">
+</form>
+
+{%endblock%}

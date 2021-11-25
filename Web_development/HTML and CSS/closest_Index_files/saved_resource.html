@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_misc_index -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./jquery.min.js.download"></script>
+<script>
+$(document).ready(function(){
+  $("td").click(function(){
+    alert($(this).closest("tr").index());
+  });
+});
+</script>
+</head>
+<body contenteditable="false">
+
+<p>Click the list items to get the index position, relative to its sibling elements</p>
+
+<table>
+<tbody><tr>
+  <td>Coffee</td>
+  <td>Milk</td>
+  <td>Soda</td>
+  </tr>
+ <tr>
+  <td>Cacc</td>
+  <td>Micdsd</td>
+  <td>Sdscsdc</td>
+  </tr> 
+</tbody></table>
+
+
+
+</body></html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FORMS</title>
+  </head>
+  <body>
+    <h1>This project shows how Forms are created</h1>
+    <form  method="post">
+      {{form_input.as_p}}                  <!-- as_p makes all input field from top to bottom instead of horzontal -->
+      {% csrf_token %}                      <!-- csrf is must for security purpose -->
+      <input type="submit" value="submit">
+    </form>
+
+
+  </body>
+</html>

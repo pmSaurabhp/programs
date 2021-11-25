@@ -1,0 +1,11 @@
+  steps to host website
+1)  setup virtual environment
+2) install django and other packages in console
+3)  git clone https://github.com/SSaurabhsahuu/djangoEcom.git
+4)  python manage.py migrate  & makemigrations
+
+
+packages for E_Commerce website
+1) pip install django-allauth
+2)  install pycryptodome
+3)   pip install pillow

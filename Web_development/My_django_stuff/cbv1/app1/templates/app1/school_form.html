@@ -1,0 +1,18 @@
+{% extends 'app1/app1_base.html'%}
+{%block body_block %}
+<div class="jumbotron">
+  {% if delete.instance.pk %}
+  UPDATE school (this is from school_form.html)
+  {% else %}
+  CREATE School
+  {% endif %}
+  <h1>
+    <form method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" class='btn btn-primary' value="Submit">
+
+    </form>
+  </h1>
+  </div>
+  {% endblock %}

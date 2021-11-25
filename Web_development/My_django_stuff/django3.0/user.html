@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>USER_DATABASE</title>
+  </head>
+  <body>
+    {% if user_database %}
+    <ol>
+    {% for i in user_database %}
+    <li>User</li>
+    <ul>
+      <li>First_name : {{i.first_name}}</li>
+      <li>Last_name : {{i.last_name}}</li>
+      <li>Email : {{i.email}}</li>
+    </ul>
+    {% endfor %}
+    </ol>
+    {% endif %}
+  </body>
+</html>

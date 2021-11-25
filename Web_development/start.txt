@@ -1,0 +1,3 @@
+activate MyDjangoEnv
+cd C:\Users\saurabh\OneDrive\Web Developement\My_django_stuff\Blog_Clone_Project\mysite
+python manage.py

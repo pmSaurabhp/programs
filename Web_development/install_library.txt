@@ -1,0 +1,8 @@
+django 3.0.3
+python 3.8
+bootstrap4
+misaka   https://stackoverflow.com/questions/48541801/microsoft-visual-c-14-0-is-required-get-it-with-microsoft-visual-c-build-t
+braces
+pip install pycryptodome
+
+OneDrive\Web Developement\My_django_stuff\Social_Clone_Project\simplesocial

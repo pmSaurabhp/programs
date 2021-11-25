@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{%block content%}
+    <h2>Callback Messsage: </h2>                    <br>
+    <h4> Checksum Verification: {{ message }} </h4> <br>
+    MID: {{ MID }}                                  <br>
+    TXNID: {{ TXNID }}                              <br>
+    ORDERID: {{ ORDERID }}                          <br>
+    BANKTXNID: {{ BANKTXNID }}                      <br>
+    TXNAMOUNT: {{ TXNAMOUNT }}                      <br>
+    CURRENCY: {{ CURRENCY }}                        <br>
+    <h4> STATUS: {{ STATUS }} </h4>                 <br>
+    RESPCODE: {{ RESPCODE }}                        <br>
+    RESPMSG: {{ RESPMSG }}                          <br>
+    TXNDATE: {{ TXNDATE }}                          <br>
+    GATEWAYNAME: {{ GATEWAYNAME }}                  <br>
+    BANKNAME: {{ BANKNAME }}                        <br>
+    BIN_NAME: {{ BIN_NAME }}                        <br>
+    PAYMENTMODE: {{ PAYMENTMODE }}                  <br>
+    CHECKSUMHASH: {{ CHECKSUMHASH }}
+{%endblock%}

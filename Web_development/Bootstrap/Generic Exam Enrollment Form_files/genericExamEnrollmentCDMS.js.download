@@ -1,0 +1,185 @@
+function changeFormWidth(){
+	$("#mainTable > tbody > tr:nth-child(1) > td > div:nth-child(1)").attr('style', 'width : 100% !important; margin-top : 0px !important');
+	$("#mainTable").attr('style','width:100% !important; table-layout: fixed;');
+	$("#mainTable > tbody > tr:nth-child(1) > td").attr('style', 'width: 100% !important;');
+	if($("#isAdminEdit").val() == "Y"){
+		$("body > form > table").css("width","100%");
+		$("body > form > table").find("tr:eq(0)").find("td").eq(0).attr("width","100%");
+		$("body > form > table").find("tr:eq(0)").find("td").eq(0).find("div").eq(0).css("width","100%");
+		$("body > form > table").attr("id","mainTable");   
+	}
+	if($("#isAdminEdit").val()=="Y"){
+		$("#mainTable > tbody > tr:nth-child(1) > td > div:nth-child(1)").addClass("marginTop0");
+	}
+}
+function startLoader(){
+	$("#loader").show(100);
+}
+function stopLoader(){
+	$("#loader").hide(100);
+} 
+function logoutApplication(){
+	logout();	
+}
+function generateErrorMessagesForMandatory(){
+	 $('input.mandatoryinput,textarea.mandatoryinput').on('blur',function(){
+			if($(this).val() != ""){
+				$(this).parent().find('.errortxt').css('display', 'none');
+				$(this).removeClass('borderredcolor');
+				$(this).removeClass('errorField');
+				$(this).css('color','#333');
+			}
+			else{
+				$(this).parent().find('.errortxt').css('display', 'inline');
+				$(this).addClass('borderredcolor');
+			}
+			
+		});
+		$('input.mandatoryinput,textarea.mandatoryinput').on("keypress",function(){
+			$(this).parent().find('.errortxt').css('display', 'none');
+			$(this).removeClass('borderredcolor');
+			$(this).removeClass('errorField');
+			$(this).css('color','#333');
+			
+		
+		});
+		
+		$('select.mandatoryinput').on('shown.bs.select', function (e) {
+				if($(this).next().find('button .filter-option').text() == $(this).attr('title')){
+					$(this).parent().find('.errortxt').css('display', 'inline');
+					$(this).next().addClass('borderredcolor1');
+					$(this).next().find('button').addClass('borderredcolor');
+				}
+				else 
+				{
+					$(this).parent().find('.errortxt').css('display', 'none');
+					$(this).next().removeClass('borderredcolor1');
+					$(this).next().find('button').removeClass('borderredcolor');
+					$(this).next().removeClass('errorField');
+				}
+		});
+		
+		$('select.mandatoryinput').on('changed.bs.select',function(){
+				if($(this).next().find('button .filter-option').text() != $(this).attr('title')){
+					$(this).parent().find('.errortxt').css('display', 'none');
+					$(this).next().removeClass('borderredcolor1');
+					$(this).next().find('button').removeClass('borderredcolor');
+					$(this).next().find('button').removeClass('errorField');
+				}
+				else{
+					$(this).parent().find('.errortxt').css('display', 'inline');
+					$(this).next().addClass('borderredcolor1');
+					$(this).next().find('button').addClass('borderredcolor');
+				}
+		});
+	
+}
+function tabNavigationActivation(){
+	$('.responsive-tabs').bootstrapResponsiveTabs({ minTabWidth: 180, maxTabWidth: 325 });   
+	$('.nav-pills li, #tabDropdown .dropdown-menu li ').on('click',function(){
+		var linkdiv = $(this).find('a').attr('data-attr');
+		$('.tab-container').hide();
+		$(linkdiv).css('display','inline-block');
+	});
+}
+function getValue(id)
+{
+	try{
+		if(""==$("#" + id).val())
+			return $("#" + id).val();
+		else
+			return $("#" + id).val().trim();
+	}catch(Exception )
+	{
+		return "";
+	}
+}
+
+function alertMsg(content)
+{
+	$("#alertMsgPopulate").html(content);
+	$("#alertMsgPopulateDiv").fadeIn(100);
+}
+function checkEmptyOrNull(value)
+{
+	var str = "--";
+	if (value != '' && value != null)
+	{
+		str = value;
+	}
+	return str;
+}
+function removeRedBorder(id)
+{
+	$("#" + id).css("border-color", "");
+}
+function hideField(id)
+{
+	$("#" + id).hide();
+}
+
+function showField(id)
+{
+	$("#" + id).show();
+}
+
+function enableField(id)
+{
+	$("#" + id).attr("disabled", false);
+}
+
+function disableField(id)
+{
+	$("#" + id).attr("disabled", true);
+}
+function disableClick()
+{
+	$("body").off("click");
+}
+function addRedBorder(id)
+{
+	disableClick();
+	$("#" + id).css("border-color", "red");
+	
+}
+
+function removeRedBorder(id)
+{
+	$("#" + id).css("border-color", "");
+}
+
+function setHtml(id, value)
+{
+	$("#" + id).html('* '+value);
+}
+
+function isChecked(id)
+{
+	return $("#" + id).is(":checked");
+}
+
+function changeHeight(id, height)
+{
+	$("#" + id).prop("height", height);
+}
+function clearValue(id)
+{
+	$("#" + id).val("");
+}
+function openInvalidDataModal(header, content){
+	$("#" + "invalidDataHeader").html(header);
+	$("#" + "invalidDataContent").html(content);
+	$('#invalidDataModal').modal('show');
+}
+function fnStoreDropdownText(fiedlToStoreCurrentDDText, currentDDId){
+	var textOfOptionSelectedOfCurrentDD = getTextOfSelectedOptionOfADropdown(currentDDId);
+	setTextFieldData(fiedlToStoreCurrentDDText, textOfOptionSelectedOfCurrentDD);
+}
+
+function getTextOfSelectedOptionOfADropdown(dropdownId){
+	var value = $("#" + dropdownId + " option:selected").text();
+	return value;
+}
+function setTextFieldData(fieldId, value){
+	$("#" + fieldId).val(value);
+}

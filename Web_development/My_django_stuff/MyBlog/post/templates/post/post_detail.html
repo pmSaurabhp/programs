@@ -1,0 +1,8 @@
+{% extends 'MyBlog\base.html' %}
+{% block body %}
+<h1>{{detail_o.title}}</h1>
+<h2>{{detail_o.author}}</h2>
+<h2>{{detail_o.text}}</h2>
+<button type="button" name="button"><a href="{% url 'update' pk=detail_o.pk %}">Update</a></button>
+<button type="button" name="button"><a href="{% url 'delete' pk=detail_o.pk %}">Delete</a></button>
+{% endblock %}

@@ -1,0 +1,34 @@
+    /* This is
+a multi-line
+comment */
+#b1{
+    /* This is
+a multi-line
+comment */
+    display: inline-block;
+    background-color:#98bf21;
+    height:100px;
+    width:100px;
+    margin-left: 100px;
+    margin-top: 400px;
+    position:relative;
+    
+    }
+    
+    #b2{
+        display: inline-block;
+        background-color:#bf2182;
+        height:100px;
+        width:100px;
+    
+        position:relative;
+        
+        }
+    #b3{  display: inline-block;
+          background-color:#1b05e0;
+            height:100px;
+            width:100px;
+           
+            position:relative;
+            
+            }
