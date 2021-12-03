@@ -1,0 +1,5 @@
+Bitwise opearator
+	faster than Arithmetic operation
+	a & 1	returns last bit
+	a >> 1	removes last bit
+	a << b	= a * 2^b  ( not always true as for large numbers +ve number changes to -ve numbers )
