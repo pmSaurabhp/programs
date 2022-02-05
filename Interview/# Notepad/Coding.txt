@@ -3,3 +3,29 @@ Bitwise opearator
 	a & 1	returns last bit
 	a >> 1	removes last bit
 	a << b	= a * 2^b  ( not always true as for large numbers +ve number changes to -ve numbers )
+
+			https://quanticdev.com/algorithms/primitives/subarray-vs-substring-vs-subsequence-vs-subset/
+Subarray(Substring)	sub part formed from contiguos elements Hence the maintains order of elements				n*(n+1)/2 subarrays
+SubSequence		formed by maintaining the sequence of elements in array by deleting some elements from between		2^n-1 subsequences
+Subset			formed by making any possible combination of the original set and in any order				2^n-1 subsets
+			
+			If given array contains duplicate elements then subarray & subsequence will have repeatation but subsets donot have repeated elements 
+
+			1,2,3,3
+			subarray can have	{1}, {2}, {1, 2}, {2, 3},	 {1, 2, 3} {1, 2, 3,3}
+			subsequence		{1}, {2}, {1, 2}, {2, 3}, {1, 3} {1, 2, 3} {1, 2, 3,3}
+			subset			{1}, {2}, {1, 2}, {3, 2}, {3, 1} {1, 2, 3} 
+						       or {2, 1}  but not both
+Binary Search
+	use mid = l + (h-l)/2; when updating l         lower mid
+	use mid = l + (h-l+1)/2; when updating h       higher mid 
+
+
+
+
+
+
+
+
+
+

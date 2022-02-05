@@ -1,13 +1,25 @@
-vector<>  	push_back() pop_back() erase() 
-string<>  	push_back() pop_back() erase()
-stack<>		push()	    pop()	top()
-queue<>		push()	    pop()
-unordered_map<>	insert() or umap[value] erase()   find() end()	 printed only with iterator umap.begin() umap.end()
+vector<>  	push_back()	pop_back()	erase()		insert(iterator,value)
+string<>  	push_back()	pop_back()	erase()		insert(iterator,value)
+stack<>		push()		pop()		top()
+queue<>		push()		pop()
+unordered_map<>	insert(make_pair(key,value)) or umap[value]   erase()   find() end()	 printed only with iterator umap.begin() umap.end()
+		hashmap is array of pair data type
+set<>		insert()		stores unique element	
+
+Functions in Algorithm.h		( works for arrays, vector, string )
 
 sort(v.begin(), v.end(), compare) 
 	bool compare(same data type as v : v1 , same data type as v :v2 ) 
 	{ return v1.val > v2.val;  }        			for descending order
 
+reverse(arr,arr+n)
+
+binary_search(first_iterator, last_iterator, x)		returns true if x is present
+
+bsearch(&key, arr, ARR_SIZE, sizeof(arr[0]), compare)	returns address of found element	
+
+String functions
+	str1.compare(str2)
 
 when calling fun(arr);
 int fun(int b[])  or int fun(int *b) 

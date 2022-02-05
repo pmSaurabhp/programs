@@ -1,5 +1,5 @@
 In JavaScript we have Number, String, Boolean , Object            all start with CAPITAL
- 
+
 we use let, Const    ( var   was used before 2015 but it is still used in old websites )
 a=10  			does not has let / const keyword still it will work but it can create problems in future so avoid it    
 
@@ -7,13 +7,13 @@ a=10  			does not has let / const keyword still it will work but it can create p
 		like if we make a variable 	let myname='sks'
 						if(my_name==='sks')  console.log("true"); 	then it will not show any error
 						but with strict mode on 		an error that my_name is not defined will show in console 
-						
+Right to left 		let x = y = 20 - 4 - 10		output - x=6  y =6					
 Type Conversion   let a="1234";
 		      a=Number(a);
 
 Type Cohesion   let a = '14' - '10'        output  4     ( Type Number )             
 		    a = '14' + '10'        output  1410  ( Type String )    
-		    a = '14' - '10' + '5'  output  9     ( Type String )
+		    a = '14' - '10' + '5'  output  9     ( Type String )    left to right 
 		    a = '14' * '10'        output  140   ( Type Number )
 		    
 	        let a = '1'+ 1;
@@ -53,20 +53,61 @@ Functions 	can be made in 3 ways in javaScript
 		Function Expressions		const test= function (a,b){ some code )		let x=test(4,10)
 		Arrow functions			const test= (a,b) => a-b ;			let x=test(4,10)	
 						const test= (a,b) => { some code  return}	let x=test(4,10)
+
+7 primitive data types		string, number, bigint, boolean, undefined, symbol, and null
+Non-Primitive			array, Object
+(	https://www.geeksforgeeks.org/primitive-and-reference-value-in-javascript/?ref=rp	)
+
+
+const		 
+		primitive data types	 variables cannot be reassigned
+					 const a=5    then  a=6 is invalid		
+		Non-Primitive 		 variables cannot be reassigned but its members can be modified	
+					 const a=["1","2","3"]
+					 a=["5","4","3"]      is invalid
+					 a[1]=5  & a.push(10) is valid
+					 
+		https://www.w3schools.com/js/js_const.asp
 	
-Pass By Value	all primitive data type
-Pass By Value	Arrays  and  Object 
+Pass By Value		all primitive data type			
+Pass By Reference	only Arrays  and  Object 	( no way to pass by reference primitive data type )
 (  https://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference )
 
-string		In javaScript strings are immutable
+All primitive data types are Immutable
+Immutable	if any primitive object is created ( at address 2055 )
+		so the value at this address cannot be changed
+		but the reference to this object can point to new address
+		let a=10	a-> memory address ( 2055 ) holding value 10
+		a=20		a-> memory address ( 3000 ) holding value 20		
+		memory address ( 2055 ) still holds value 10 	but memory is deallocated automatically by garbage collection algorithm
+
+Memory Management	for memory optimzation javascript compiler gives one memory to 2 variables having same value
+			
+			Primitives	( immutable )
+			let a=b=5				both point at same address
+			b=1
+			output	a=5  b=1			both point at diff address
+			if not immutable then it would be bad as changing one variable will change value of other variable
+			
+			Non-Primitives	( mutable )
+			let a=b=['1','2','3']					both point at same address
+			a[0]=4
+			output	a=['4','2','3']		b=['4','2','3']		both point at same address
+ 
+string		In javaScript strings are immutable ( str[4]='g'   will not change str )
 		so to change ith element of string 
 			chr ='x'
 			str=str.slice(0,i) + chr + str.slice(i+1);
+
+		str="hello"
+		str="world"
+		console.log(str)	world		memory address holding value "hello" will be deallocated by garbage collector
+
 		str.slice(0,4)		returns a string from 0  index to 3rd index of str
 		str.slice(5)		returns a string from 5th index to last index of str
 
-Array		let arr = ['sks',23,'saurabh'];			a array in JavaScript can hold differnt data types at one time 
-	or	const arr = new Array('sks',12,'saurabh');		if we do arr.push(34) its legal		but if we do arr=['mmm',34] not legal because of const
+Array		let arr = ['sks',23,'saurabh'];			        a array in JavaScript can hold differnt data types at one time 
+	or	const arr = new Array('sks',23,'saurabh');		if we do arr.push(34) its legal		but if we do arr=['mmm',34] not legal because of const
 		
 		arr.push(34)		push element at last		returns index of element
 		arr.unshift(34)		push element at first

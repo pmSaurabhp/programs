@@ -1,8 +1,8 @@
 java 
 selenium (frontend UI)
-rest assured
-postman
-cucomber
+rest assured (api testing )
+postman	( manual api testing)
+cucomber (BBD framefork )
 appium  (apps)
 jmeter	(performance)
 cypress	(competitor of selenium)

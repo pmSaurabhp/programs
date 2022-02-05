@@ -23,9 +23,14 @@ int main()
 
 	cout << "KEY\tELEMENT\n";
 
-	for (auto itr = ump.begin(); itr != ump.end(); itr++) {
-		cout << itr->first
-			<< '\t' << itr->second << '\n';
+	for (auto itr : ump) {
+		cout << itr.first
+			<< '\t' << itr.second << '\n';
 	}
+	// or use this
+	// for (auto itr = ump.begin(); itr != ump.end(); itr++) {
+	// 	cout << itr->first
+	// 		<< '\t' << itr->second << '\n';
+	// }
 	return 0;
 }

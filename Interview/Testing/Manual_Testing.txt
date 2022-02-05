@@ -1,7 +1,8 @@
-Error, Bug, Failure
-Error		When software is behaving in unexpected way in Developement phase
-Bug		When software is behaving in unexpected way in Testing phase
-Failure		When software is behaving in unexpected way after Deployement  when customer is using it
+Error, Defect, Bug, Failure
+Error		Mistake made in code by developer which causes defect, bug and failure
+Defect		When software is behaving in unexpected way in Developement phase				( when developer reports )
+Bug		When software is behaving in unexpected way in Testing phase					( when tester reports )
+Failure		When software is behaving in unexpected way after Deployement  when customer is using it	( when customer reports )
 
 SDLC	Software Development Life Cycle
  Requirement analysis		output - User Requirement Specification
@@ -13,10 +14,13 @@ SDLC	Software Development Life Cycle
 STLC	Software Testing Life Cycle		https://www.guru99.com/software-testing-life-cycle.html
  Requirement Analysis		output- Requirement Tracebility Matrix  & Functional Requirement Specification     ( http://www.ofnisystems.com/services/validation/traceability-matrix/
  Test Plan			input- RTM & FRS	output- Test Plan Document
- Test Case Development		
+ Test Case Development		input- TPD		output- Test Cases
  Environment Setup
  Test Execution			Test Script Execution & maintainance, Bug Reporting	
  Test Cycle Closure
+
+Requirement Tracebility Matrix		The document in which Test cases are maped with Business Requirements
+					We can check forward compatibility and backward compatibility
 
 Bug life Cycle			Bug Management Tool ( Jira, Trello )		https://myresources.deloitte.com/personal/saurasahu_deloitte_com/_layouts/15/onedrive.aspx?listurl=https%3A%2F%2Famedeloitte%2Esharepoint%2Ecom%2Fsites%2FHU20%2E0SDETTrack%2FShared%20Documents&id=%2Fsites%2FHU20%2E0SDETTrack%2FShared%20Documents%2FGeneral%2FManual%20Testing%2FDefect%20or%20bug%20life%20cycle%2Emp4&parent=%2Fsites%2FHU20%2E0SDETTrack%2FShared%20Documents%2FGeneral%2FManual%20Testing
  		New
@@ -28,7 +32,7 @@ Bug life Cycle			Bug Management Tool ( Jira, Trello )		https://myresources.deloi
  		Verified
  		Closed
 
-Severity	Impact of a bug on other modules
+Severity	Impact of a bug on other modules. If functionalities are not working.
 Priority	Order in which bug is fixed
 
 					Severity

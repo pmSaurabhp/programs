@@ -33,6 +33,7 @@ Quick sort is based on D&C approach as it selects a pivot element and make all e
 all elments greater than pivot to right of it this divide the array  into 2 parts and then repeat this proceess independently 
 in left and right part untill 1 element remains .
 the worst case tc is O(n^2) and average case is O(n logn)
+But since it has the upper hand in the average cases for most inputs, Quicksort is generally considered the “fastest” sorting algorithm
 
 Heap - 4 properties of Heap
 1) Its not a Binary search tree ( parent > left & right     left > right || right > left both are valid) 
