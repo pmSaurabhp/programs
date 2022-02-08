@@ -47,13 +47,6 @@ Ternary operator  (three operators)( one line if else )
 	let b = age >= 18 ? 'Drink' : 'No Drink';
 	console.log(b);          output    Drink
 
-
-Functions 	can be made in 3 ways in javaScript
-		Function Declaration		function test(a,b){ some code }			test(4,10)
-		Function Expressions		const test= function (a,b){ some code )		let x=test(4,10)
-		Arrow functions			const test= (a,b) => a-b ;			let x=test(4,10)	
-						const test= (a,b) => { some code  return}	let x=test(4,10)
-
 7 primitive data types		string, number, bigint, boolean, undefined, symbol, and null
 Non-Primitive			array, Object
 (	https://www.geeksforgeeks.org/primitive-and-reference-value-in-javascript/?ref=rp	)
@@ -73,6 +66,17 @@ Pass By Value		all primitive data type
 Pass By Reference	only Arrays  and  Object 	( no way to pass by reference primitive data type )
 (  https://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference )
 
+identifier		address		Value			Address		Value
+age	------------>	001		30	
+newAge	------------>	002		31		
+
+me	-------->--->	003		D30f	----------->	D30f		{ name:"sks";
+friend	-------/								  age:30; 
+										 }							
+			--- Stack -----				----- Heap --------
+
+	   https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648509#overview
+
 All primitive data types are Immutable
 Immutable	if any primitive object is created ( at address 2055 )
 		so the value at this address cannot be changed
@@ -91,7 +95,7 @@ Memory Management	for memory optimzation javascript compiler gives one memory to
 			
 			Non-Primitives	( mutable )
 			let a=b=['1','2','3']					both point at same address
-			a[0]=4
+			b[0]=4
 			output	a=['4','2','3']		b=['4','2','3']		both point at same address
  
 string		In javaScript strings are immutable ( str[4]='g'   will not change str )
@@ -106,6 +110,12 @@ string		In javaScript strings are immutable ( str[4]='g'   will not change str )
 		str.slice(0,4)		returns a string from 0  index to 3rd index of str
 		str.slice(5)		returns a string from 5th index to last index of str
 
+Functions 	can be made in 3 ways in javaScript
+		Function Declaration		function test(a,b){ some code }			test(4,10)
+		Function Expressions		const test= function (a,b){ some code )		let x=test(4,10)
+		Arrow functions			const test= (a,b) => a-b ;			let x=test(4,10)	
+						const test= (a,b) => { some code  return}	let x=test(4,10)
+
 Array		let arr = ['sks',23,'saurabh'];			        a array in JavaScript can hold differnt data types at one time 
 	or	const arr = new Array('sks',23,'saurabh');		if we do arr.push(34) its legal		but if we do arr=['mmm',34] not legal because of const
 		
@@ -119,10 +129,10 @@ Array		let arr = ['sks',23,'saurabh'];			        a array in JavaScript can hold 
 Objects		let obj_list = {
 			first :'Saurabh',
 			last :'Sahu',
-			birthyear :23,
+			birthyear :1923,
 			friends : ['aaa','bbb','cccc']
 			
-			calage: function(){						// function Expression is used   &  function Declaration cannot be used
+			age: function(){						// function Expression is used   &  function Declaration cannot be used
 				return console.log(2021 - this.birthyear)
 				}
 
@@ -132,4 +142,78 @@ Objects		let obj_list = {
 		To make a new data member	obj_list.hobbies = ['games','books','coding']	or   obj_list['hobbies']=
 		to make a new member function	obj_list.fun = function (){ some code }
 
+Prettier
+snippets   	 alias code
+todohighlighter
+live server	 no need of manual refreshing
+
+
+windows key + .   ->  emoji
+
+DOM ( Document Object Model )
+	is a web API that can be used by javaScript
+	Document is the highest class head & body are elements of it
+			Document
+		head		 body
+		title	   section	section
+			 <p>	  <a>	div	img
+
+document.querySelector(".someClass")	 =	<div class="someClass">hello</div>
+	
+document.querySelector(".some").textContent	div, p
+document.querySelector(".some").value		input
+
+document.querySelectorAll(".some")		returns all elements with .some class
+
+Class Manipulation
+document.querySelector(".some").classList.add("anotherClass")	add class
+								remove class
+								contains
+							
+document.addEventListener('keydown', function (e) { some code });	// e is as event object that is passed by javaScript
+                            						// as an argument , we just give the event a name 'e'
+                            						// and use it 
+
+
+
+JavaScript Theory
+			JavaScript is a Just in Time Compilation (JIT ) Language. It is no more an interpreted Language as before 
+			
+			JavaScript code  --->   compiler   --->  Machine code ( immediately executed )
+						   |		   |
+	 					   |		   |
+						   ---<<------<<---
+                                             less optimized Machine code is then optimized which makes Javascript fast
+			
+			In compiled languages optimized Machine code file is generated but in JIT no file is created 
+
+
+let is block scoped
+var is function scoped
+function is block scoped (only in strict mode ) 
+
+Hoisting	use variables before they are declared
+
+				Hoist		value defore declaration
+function declaration		yes		same as in declaration
+var				yes		undefined
+let & const			No		uninitialized & is stored in TDZ ( Temporal Dead Zone )
+function expression & arrow	depends on keyword used if let & const then Hoist = No 
+
+console.log(firstName)		error:	cannot access firstName before initialization	
+let firstName="sks";
+console.log(lastName)		error:	lastName is not defined
+
+console.log(lname);		undefined	( no error )  Thats why let & const were introduced so that bugs can be caught easily
+var lname="s";
+
+This keyword
+		function inside object		this = Object that is calling the function
+		simple function (global )	this = undefined	( in strict Mode otherwise window Object of Browser )
+		Arrow function 			this = this of parent function ( if no parent then window object)
+		Event Listener			this = DOM element
+
+
+Creating new object at different address by coping a object
+					Shallow copy	const newCopy= Object.assign({}, original_object);
 

@@ -1,13 +1,14 @@
 https://www.w3schools.com/html/html_css.asp
 comments	/*   text    */
 
-Combinators	space   decendent(child + sub child)		div p{  }
+Combinators	,	multiple elements			div, p , h2 { }
+		space   decendent(child + sub child)		div p{  }
 		>	child					div > p{  }
 		+	next element				div + p{  }
 		~	all next elements			div ~ p{  }
 Box Model 
- Margin		top  , right, bottom, left ( margin: auto   makes element center but only works when "width" is set)
-					  (if width not set use text-align: center)(to remove space betwn divs margin:-2px;)
+ Margin		top  , right, bottom, left ( margin: auto   makes element center but only works when "width" is set & position is not used)
+					   (to remove space betwn divs margin:-2px;)
  Border         style, width, color          border-style property is must without it color and width property donot work
  Padding	top  , right, bottom, left   
  Content	width, height
@@ -17,7 +18,7 @@ we can change color of padding by changing background-color
 
 Mor bar pani car
 
-text-align: center	used to align text when width is not set
+text-align: center	used to align content inside a element
 
 max screen width 1440px
 
@@ -40,6 +41,14 @@ display:inline		element starts from same line   (  <a>  )      eg. a, span, img,
 
 display:inline_block	element starts from same line keeping height and width property
 			when block elemnt is changed to display:inline-block width, height, top & bottom margin are respcted 
+display:hidden
+
+Flexbox		display: flex;			make child elements into a single row
+		flex-wrap:wrap;			wrap the elements into more rows
+		flex-direction:row or column	changes position of elements
+		justify-content:		changes space between elements in horizonal direction
+		align-item:			
+		align-content:	 		changes space between elements in vertical direction
 
 background      color, image, repeat, attachment(scroll, fixed), position(right top)
   		background shorthand can be in any order
@@ -52,6 +61,7 @@ fixed	    position fixed and gap is occupied by other elements
 sticky
 
 z-index (when overlaping happens we can set which element is in top)
+
 In case of overflow when an element position exceeds hight or width of parent element and overlaps the parents next element
 we use    overflow:auto    and scroll bars come.
  To avoid scroll bar we should manually assign greater height or width
@@ -67,10 +77,3 @@ float :left, right              used to make elements eg img to left or right of
 	  clear: both;
  	  display: table;
 	}
-
-Flexbox		display: flex;			make child elements into a single row
-		flex-wrap:wrap;			wrap the elements into more rows
-		flex-direction:row or column	changes  
-		justify-content:		changes space between elements in horizonal direction
-		align-item:			
-		align-content:	 		changes space between elements in vertical direction
