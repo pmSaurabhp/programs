@@ -1,11 +1,25 @@
-vector<>  	push_back()	pop_back()	erase()		insert(iterator,value)
-string<>  	push_back()	pop_back()	erase()		insert(iterator,value)
+vector<>  	push_back()	pop_back()	erase(iterator)		insert(iterator,value)
+string<>  	push_back()	pop_back()	erase(iterator)		insert(iterator,value)
 stack<>		push()		pop()		top()
 queue<>		push()		pop()
 unordered_map<>	insert(make_pair(key,value)) or umap[value]   erase()   find() end()	 printed only with iterator umap.begin() umap.end()
 		hashmap is array of pair data type
 set<>		insert()		stores unique element	
 
+erase(iterator)
+		to delete value at ith index		str.erase(str.begin()+i) and then i--; as next element will be at same index
+ 		for(int i=0;i<input1.size();i++)
+   		 {
+      		  if(input1[i]==input2[0])
+        	  {
+          	   input1.erase(input1.begin()+i);
+            	   cout<<input1;
+          	   i--;
+        	  }
+   		 }
+ 		
+		
+		
 Functions in Algorithm.h		( works for arrays, vector, string )
 
 sort(v.begin(), v.end(), compare) 
@@ -17,6 +31,8 @@ reverse(arr,arr+n)
 binary_search(first_iterator, last_iterator, x)		returns true if x is present
 
 bsearch(&key, arr, ARR_SIZE, sizeof(arr[0]), compare)	returns address of found element	
+
+getline(cin,str)	to take input string with space
 
 String functions
 	str1.compare(str2)
@@ -32,6 +48,20 @@ for Vectors we can do both pass by value      void fun(vector<int> vect)
 ascii value its char value are interchangeable
 a[i]=101  // 'd'
 
+
+while(1)  while(-1) while(290)    true
+while(0)   false
+
+int range 10^9
+long int  ->  %ld  (in windows long int & int are same)
+long long int range 10^20
+
+
+//////////////////   for C language ////////////////////////////////////////////////////////////////////////////////////////////
+ int n;      it works only in c/c++ that to in 
+cin>>n;    latest version of c/c++
+int a[n];    not in turboc
+
 %s  reads input until a whitespace, \n , eof (\0)
 gets() reads input until \n,eof
 
@@ -42,17 +72,6 @@ int a[1000];
 for(i=0;i<10;i++)
 { a[i]=i; }
 strlen(a);       gives strlen(a)=1  
-
-while(1)  while(-1) while(290)    true
-while(0)   false
-
-int range 10^9
-long int  ->  %ld  (in windows long int & int are same)
-long long int range 10^20
-
- int n;      it works only in c/c++ that to in 
-cin>>n;    latest version of c/c++
-int a[n];    not in turboc
 
 array/vector can hold 4gb of data in cpp
 

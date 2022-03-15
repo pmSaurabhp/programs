@@ -12,7 +12,7 @@ Abstraction    It is a technique by which unnecessary details is hided and only 
 		For eg. we use pow() or sort()  without knowing there implementation details.
 
 Encapsulation  It is a process by which data and function is binded together into a single unit 
-		provide security by help of access specifiers.
+		and provide security by help of access specifiers.
 Inheritance    It is a technique by which a child class is created using another class so that the child class 
 		has properties of parent class.
 		Inhertance helps in code reusability

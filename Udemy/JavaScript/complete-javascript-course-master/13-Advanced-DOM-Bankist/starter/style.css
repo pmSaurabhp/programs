@@ -394,7 +394,9 @@ h4 {
   justify-content: center;
 
   /* THIS creates the animation! */
-  transition: transform 1s;
+  transition: transform 1s ;  
+  /* transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);  */
+  /* we will get value of   transform   from javaScript */
 }
 
 .slide > img {

@@ -100,8 +100,9 @@ Memory Management	for memory optimzation javascript compiler gives one memory to
  
 string		In javaScript strings are immutable ( str[4]='g'   will not change str )
 		so to change ith element of string 
-			chr ='x'
-			str=str.slice(0,i) + chr + str.slice(i+1);
+			let str="hello";			
+			let chr ='x'
+			str=str.slice(0,i) + chr + str.slice(i+1);	then if i=1  str = hxllo
 
 		str="hello"
 		str="world"
@@ -113,11 +114,11 @@ string		In javaScript strings are immutable ( str[4]='g'   will not change str )
 Functions 	can be made in 3 ways in javaScript
 		Function Declaration		function test(a,b){ some code }			test(4,10)
 		Function Expressions		const test= function (a,b){ some code )		let x=test(4,10)
-		Arrow functions			const test= (a,b) => a-b ;			let x=test(4,10)	
+		Arrow functions			const test= (a,b) => a-b ;			let x=test(4,10) if one line is present no need to write return	
 						const test= (a,b) => { some code  return}	let x=test(4,10)
 
 Array		let arr = ['sks',23,'saurabh'];			        a array in JavaScript can hold differnt data types at one time 
-	or	const arr = new Array('sks',23,'saurabh');		if we do arr.push(34) its legal		but if we do arr=['mmm',34] not legal because of const
+		const arr = new Array('sks',23,'saurabh');		if const is present then arr.push(34) is legal	  but if we do arr=['mmm',34] not legal 
 		
 		arr.push(34)		push element at last		returns index of element
 		arr.unshift(34)		push element at first
@@ -150,6 +151,9 @@ live server	 no need of manual refreshing
 
 windows key + .   ->  emoji
 
+API	
+	DOM , timer, Fetch
+
 DOM ( Document Object Model )
 	is a web API that can be used by javaScript
 	Document is the highest class head & body are elements of it
@@ -159,7 +163,10 @@ DOM ( Document Object Model )
 			 <p>	  <a>	div	img
 
 document.querySelector(".someClass")	 =	<div class="someClass">hello</div>
-	
+
+document.querySelector(".some").innerHTML	=   all html inside .some element
+document.querySelector(".some").insertAdjacentHTML('afterbegin', <div> hello </div> )		
+
 document.querySelector(".some").textContent	div, p
 document.querySelector(".some").value		input
 
@@ -168,13 +175,24 @@ document.querySelectorAll(".some")		returns all elements with .some class
 Class Manipulation
 document.querySelector(".some").classList.add("anotherClass")	add class
 								remove class
-								contains
-							
-document.addEventListener('keydown', function (e) { some code });	// e is as event object that is passed by javaScript
-                            						// as an argument , we just give the event a name 'e'
-                            						// and use it 
+								contains returns true or false
 
+document.querySelector(".some").children			returns a HTML collection of all children elements
+document.querySelector(".some").parentElement			returns parent element
+document.querySelector(".some").closest(".specificElement")	reurns closest parent with .specificElement class
+document.querySelector(".some").parentElement.children		returns all siblings .some class
+document.closest(".workout").querySelector(".workout__edit");	returns specific child of a specific parent
 
+e.preventdefault()	prevent forms default action of submitting & reloading use
+			when button is used inside form then clicking it reloads the page	
+						
+document.addEventListener('keydown', function (e) {  if (e.key === 'Escape') some code});	// e is as event object that is passed by javaScript
+                            									// as an argument , we just give the event a name 'e'
+                            									// and use it 
+
+document.querySelector(".class").scrollIntoView({ behavior: 'smooth' });
+
+Intersection Observer	 event that starts when we reach at certain point instead of happening whenever we scroll
 
 JavaScript Theory
 			JavaScript is a Just in Time Compilation (JIT ) Language. It is no more an interpreted Language as before 
@@ -187,6 +205,24 @@ JavaScript Theory
 			
 			In compiled languages optimized Machine code file is generated but in JIT no file is created 
 
+
+//  see image javascript1 
+const a=1;
+function first(){
+const b=2;								
+function second(){
+	const c=2;
+	console.log(c+b+a)  // no error as b & a are accessible from parent scope 
+	third()
+ }
+}
+
+function third(){
+ const d=4;
+ console.log(d+c+b+a);	  // error : c & b are not accesible through chaining as third() is in global scope  & second is not parent of third
+}
+
+first()			
 
 let is block scoped
 var is function scoped
@@ -212,8 +248,340 @@ This keyword
 		simple function (global )	this = undefined	( in strict Mode otherwise window Object of Browser )
 		Arrow function 			this = this of parent function ( if no parent then window object)
 		Event Listener			this = DOM element
+						form.addEventListener("click", this.sum() )		  this inside sum() points to form html
+						form.addEventListener("click", this.sum().bind(this) ) 	  this inside sum() points to object calling sum
+						
+						in most callback functions add bind() 
 
+
+bind(object Name)	Returns A copy of the given function with the specified this value, and initial arguments (if provided).
+			binds this of global or arrow function to a object
+			one use is to add more arguments base function
+			handleHover.bind(0.5)		this = 0.5
+			
 
 Creating new object at different address by coping a object
 					Shallow copy	const newCopy= Object.assign({}, original_object);
+						 				
+Destructuring		creating separate variables for elements in array	( used when accessing external APIs )
+			const [a,b,c]=array
+			const {key2,key1,key4} = object			( name of elements should be exact as in object ) 
+
+Spread operator		unpack elements from a list   ( right side of '=' assign operator )
+			make new array from all elements of originl array	
+			const newArr=[ 1, 2, ...original ]		shallow copy ( new copy of inner arrays & object are not created )
+			const newObject= { ...object }			shallow copy
+			can be used on all iterables ( array, string, set, maps ) & objects 
+			
+Rest operator		pack, combine elements to make single entity   ( left side of '=' assign operator )
+			const [a, b, ...restAll] = [1, 2, 3, 4, 5, 6]
+			then restAll =  [3, 4, 5, 6]
+
+For of loop		for(const item of arr)
+				console.log(item)
+			for(const [i,element] of arr.entries())		// index & elements
+				console.log(i+" "+element)
+
+arr.forEach(function(element,index,array){
+	instructions for forEach()
+	break statement does not work in forEach
+})
+
+functions ES6 style	calculate()		instead of	calculate : function()
+			{ some code
+			}	
+
+Strings		All string functions are Case sensitive
+		let str="abcdcef";
+		str.indexOf('c')	o/p	2
+		str.lastIndexof('c')	o/p	4
+		str.slice(2)		o/p	"cdcef"
+		str.slice(2,5)		o/p	"cdc"	 "cdce"	is wrong	slice(start index, end index + 1 )
+		str.slice(-2)		o/p	"ef"
+		
+		primitives cannot have functions so javascript converts string -> String object which have functions
+		
+		str.toUpperCase()	o/p	ABCDCEF
+		str.toLowerCase()	o/p	abcdcef
+		str[0].toUpperCase()+str.slice(1)	o/p	Abcdcef		capitalize 1st letter
+
+		str="    hello!  "
+		str.trim()		o/p	str="hello!"		removes space & \n
+
+		let str2 = str.replace("a","z").replace("b","y")	str2 = "zycdcef"		chaining
+		str.replaceAll("c")		replace all occurences of c
+
+		str.includes("cd")	 returns true
+		"s".repeat(4);		o/p	ssss		
+
+		str="saurabh kumar sahu";
+		str.split(" ")		   o/p		array = ["saurabh", "kumar", "sahu"]
+		let [ firstname, ,lastname ] = str.split(" ")
+
+		array.join("+")		   o/p		string -> "saurabh+kumar+sahu"
+
+
+Higher order functions		which have function as a parameter ( or callback function )
+				this provides abstraction as higher order functions are inbuilt functions
+				functions are also objects 
+
+Closures	a property by which functions can access variables of there parent even after the parents execution context has ended
+		it happens with callback functions ( functions returned by other function) when its higher order function has executed ( ended )
+		Analogy	: a person can access resources of its parent (place of persons birth ) even after parents are dead 
+		console.dir(function name)	to see variables inside closure
+
+Array	all methods from string
+	does not change original array
+		arr.slice(start index, end index + 1)
+		arr.concat(arr2)
+		arr.join("-")		returns string of array elements joined by "-"
+		
+	
+	mutates original array
+		arr.splice(start index)						deletes all elements from start index
+		arr.splice(start index, n = count of elements to be deleted)	deletes n elements from start index
+		arr.reverse()  
+
+
+map((ele) => ele+2)								returns a new array with modified values
+filter((ele, i, arr) => ele>0 )							returns a new array by filtering some elements
+reduce((acc,cur) => {return acc + cur},0 -> initial value)	returns a value ( total sum , max, min etc)
+find((acc) => acc.username === name)				returns a object or value to be searched
+findIndex((acc) => acc.username === name)	same as indexOf(name)
+
+sort((a,b)=> a-b)		if true then return 1 else return -1 
+
+use of these inbuilt functions		with funcions we can use chain other functions
+					manually create separate variable to store the result is not needed 
+
+let flag=false;
+flag=!flag;			to toggle between true & false otherwise we have to do
+				if(flag==false) flag=true;
+				else
+				  flag=false;
+
+  // document.querySelectorAll() gives Node list not array 
+  // so it should be converted to array to use inbuilt functions
+
+  // using Array.from() 
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value')
+  ).map(el => Number(el.textContent.replace('+ ', '')));
+  console.log(movementsUI);
+
+  // using destructuring ...
+  const movementsUI2 = [...document.querySelectorAll('.movements__value')].map(el => Number(el.textContent.replace('+ ', '')));
+  console.log(movementsUI2);
+
+Number		Number(" 30px")			o/p  NaN  Not a Number
+		Number.parseInt("   30$ ")	o/p  30
+		Number.parseFloat(" 2.55rem")	o/p  2.55	2.5rem coming from css
+		Number.isFinite(20)		o/p  true	.isFinite()	is used to check if a value is Number or not
+		Number.isFinite(20.45)		o/p  true
+		Number.isFinite("20")		o/p  false
+		Number.isInteger(20)		o/p  true
+
+name=setInterval(function(){ }, seconds)		note : we are storing setInterval() in 'name' but also calling setInterval() 
+clearInterval(name)					so it should be placed inside another function
+
+name=setTimeOut(function(){ }, seconds)
+clearTimeout(name)
+
+--------   CRUD operations    ----- 
+Select		document.head(), document.body()
+		document.querySelector()			(same as document.getElementById(''), document.getElementByClassName('') )
+		document.querySelectorAll()			
+		
+Create	& inserting			
+		let html=`<div class="cookie-message"> ds fs </div>`;
+		elementName.insertAdjacentHTML('afterbegin',html)
+		
+		const message = document.createElement('div');
+		message.classList.add('cookie-message');
+		// message.textContent = 'We use cookied for improved functionality and analytics.';
+		message.innerHTML =
+  		'We use cookied for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
+
+		// header.prepend(message);
+		header.append(message);
+		// header.append(message.cloneNode(true));
+
+		// header.before(message);
+		// header.after(message);
+
+delete		message.remove() 
+
+set styles
+		message.style.backgroundColor = "red";			background-color changes to backgroundColor ( - is replaced with camel case )
+get styles
+		getComputedStyle(element).backgroundColor  	we can do message.style.backgroundColor but only works when styles modified in javascript
+		getComputedStyle(element).height	   	so use getComputedStyle() in every case
+
+		document.documentElement.style.setProperty('--color-primary', 'orangered');	to set user made css variables 	( --color-primary )
+
+
+// Attributes
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.className);		logo.class does not work
+
+logo.alt = 'Beautiful minimalist logo';
+
+// Non-standard ( user made )
+console.log(logo.designer);			does not work
+console.log(logo.getAttribute('designer'));	works			so always use getAttribute('')
+logo.setAttribute('company', 'Bankist');
+
+absolute path		relative to root directory	(full path)
+relative path		relative to current directory
+
+console.log(logo.src);				http://127.0.0.1:5500/starter/img/logo.png		gives absolute path	(full path)
+console.log(logo.getAttribute('src'));		img/logo.png						gives relative path	
+
+const link = document.querySelector('.nav__link--btn');
+console.log(link.href);						gives absolute path
+console.log(link.getAttribute('href'));				gives relative path
+
+// Data attribute	data-dataName = 4
+< a class=" " href="" data-tab=1> hello </a>
+console.log(link.dataset.tab);  or				
+console.log(link.getAttribute('data-tab'));
+
+console.log(logo.dataset.versionNumber);
+
+// Classes
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
+logo.classList.toggle('c');
+logo.classList.contains('c'); // not includes
+
+
+Event bubbling		> if child & parent have same event listeners ( click ) then if a click event happens on child element then it also happens on
+			  parent element
+			> Not all events have event bubbling eg. blur, focus, load, unload, mouseEnter 
+
+Event Delegation	> using Event bubbling and adding event to parent of all elements instead of adding event to all elements to increase speed
+			> if we click on element not having event but its parent has a event then it will have same affect as the element itself has event
+			  ( caused due to event bubbling )
+			> Adding events uses memory & adding events to each element uses more memory 
+			> Not all events have event bubbling eg. blur, focus, load, unload, mouseEnter 
+
+Intersection Observer	 event that starts when we reach at certain point instead of happening whenever we scroll
+
+
+
+script in head		lowest performance      script is downloaded & fetched & then body html is parsed
+script in body		better 			script is downloaded after html parse is complete
+script async in head	more better		script is downloaded parallely while HTML parsing but executes after script download completed & before html parse uncomplete
+script defer in head	best performance	script is downloaded parallely while HTML parsing & executes script after html is parsed completely
+
+
+Object & classes
+
+Constructor function	javaScript does not have True classes as other languages have
+			Constructor function are used to simulate classes by using new keyword before calling a function
+			const Person = function(name,birthYear){    // constructor function
+				this.name = name;
+				this.birthYear=birthYear;
+			}
+
+			const sks= new Person('saurabh','3254')    // instance or object
+
+			
+Prototype		is an object which acts as blueprint for all objects made by same constructor function
+			every object has a prototype			( functions are also objects )
+			jonas.__proto__.__proto__.__proto__
+			//  prototype	object	  NULL
+
+Class			javaScript does not have True classes as other languages have 
+			javaScript Class is an abstraction over Constructor function
+			we are provided a class syntax so as to feel like True classes & Class are easy to use
+			
+			class PersonClass{
+			  constructor(firstName,lastName)	// constructor function
+				{ this.firstName=firstName;
+				  this.lastName=lastName;
+				}
+ 			  calcAge(){				// calcAge() adds to prototype object
+				console.log("hello");
+			  	}
+			}
+
+Object.create()		3rd way to create objects
+			const jonas = Object.create(person)
+
+Inheritance from classes ( constructor functions & prototype )
+			https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649085#overview
+
+Inheritance from ES6 Class 	
+				class Person{
+					id = Math.random();
+					dateOfBirth
+					constructor(fullName, lastName)
+					{  this.fullName=fullName
+						this.lastName = lastName
+					  
+					}
+					
+					calcAge(){
+					    console.log(this.dateOfBirth);
+					}
+				}
+				class Student extends Person {
+					constructor(fullName,lastName,age)		
+					{  super(fullName, lastName);		// calls constructor function of parent class
+				       	   this.age=age;
+					}
+					// inherits all functions in Parent class
+					
+					sum(){					// sum() adds to prototype object
+					 console.log("hello");
+			  		}
+				}
+				
+				Student class will contain all varibles ( id, dateOfBirth, fullName, lastName , age) & 
+				all methods  calcAge() , sum()
+		
+local storage
+		localStorage.setItem('workouts', JSON.stringify(this.#workouts)); 
+              	local storage takes {key ,value} pair
+
+Synchronous code				
+			const p=123;			next line executes after current line is executed
+			alert("Text !")			blocking code	( 3rd line is not executed till we press OK in alert )
+			p=10;
+
+Asynchronous JavaScript
+			const p=123;
+			setTimeout(function(){ 		Non blocking code	( timer is running in background & 5th line is executed without any delay )
+			   console.log(" Hello ");
+			}, 1000);
+			p=10;		
+		
+			asynchronous event listeners		Load , 	
+			synchronous event listeners		click			click is not running in background	
+			
+
+AJAX	Asynchronous JavaScript and XML
+
+Promise		is a container for future asynchronous value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

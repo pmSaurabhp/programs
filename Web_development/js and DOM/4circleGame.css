@@ -6,7 +6,7 @@ div{
 
   width:100px;
   height:100px;
-  background:gray;  /* background-color not works */
+  background-color:gray;  /* background-color not works */
   border-radius: 50%; /* make circle */
   border:4px solid black;
 }

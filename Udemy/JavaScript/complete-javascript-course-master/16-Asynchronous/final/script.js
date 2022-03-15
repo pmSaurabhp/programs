@@ -35,13 +35,13 @@ const getJSON = function (url, errorMsg = 'Something went wrong') {
   });
 };
 
-/*
+
 ///////////////////////////////////////
 // Our First AJAX Call: XMLHttpRequest
 
 const getCountryData = function (country) {
   const request = new XMLHttpRequest();
-  request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
+  request.open('GET', `https://restcountries.com/v2/name/${country}`);
   request.send();
 
   request.addEventListener('load', function () {
@@ -70,7 +70,7 @@ const getCountryData = function (country) {
 getCountryData('portugal');
 getCountryData('usa');
 getCountryData('germany');
-*/
+
 
 ///////////////////////////////////////
 // Welcome to Callback Hell

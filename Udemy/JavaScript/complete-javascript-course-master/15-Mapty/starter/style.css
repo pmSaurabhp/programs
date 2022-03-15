@@ -89,8 +89,11 @@ a:visited {
   font-weight: 600;
   grid-column: 1 / -1;
 }
-
-.workout__details {
+.workout__edit { 
+  position : relative;
+  left : 150px; 
+}
+  .workout__details {
   display: flex;
   align-items: baseline;
 }

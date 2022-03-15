@@ -6,9 +6,9 @@ const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelectorAll('.show-modal');
 
 const openModal = function () {
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
+  modal.classList.remove('hidden');   // modal div  width & height is made 50%
+  overlay.classList.remove('hidden'); // overlay is a div element whose width
+};                                    // & height is made 100% & position at top
 
 const closeModal = function () {
   modal.classList.add('hidden');

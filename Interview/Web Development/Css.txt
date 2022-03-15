@@ -55,8 +55,8 @@ background      color, image, repeat, attachment(scroll, fixed), position(right 
 
 position        (property   right, left, top, bottom, z-index, clip ) 
 static	    Normal position(default position) 
-relative    position shifts relative to its static position. Other content will not be adjusted to fit into any gap left by the element.
-absolute    position shifts relative to ancestor having relative position. Other content occupies gap left by the element. Absolute positioned elements are removed from the normal flow, and can overlap elements.
+relative    position shifts relative to its normal position. Other content will not be adjusted to fit into any gap left by the element.
+absolute    position shifts relative to nearest positioned ancestor ( moostly relative positioned). Other content occupies gap left by the element. Absolute positioned elements are removed from the normal flow, and can overlap elements.
 fixed	    position fixed and gap is occupied by other elements
 sticky
 
@@ -77,3 +77,43 @@ float :left, right              used to make elements eg img to left or right of
 	  clear: both;
  	  display: table;
 	}
+
+transform:	translate(20px,20px)	moves the element 20px in x axis and 20px downward in y direction
+		translateX(20px)	moves the element 20px in x axis 
+		translateY(20px)	moves the element 20px in y axis
+
+		scale(1.5)		makes element larger
+		
+		rotate(30deg)		rotates element by 30 degree
+
+
+
+(  https://web.dev/learn/css/transitions/  )
+transition:	transition-property  transition-duration  transition-timing-function  transition-delay 
+
+		shorthand	transform  1s ease-in-out 0s
+				transform  1s		
+		By default, CSS switches the style of these states instantly.
+		Using CSS transitions, we can interpolate between the initial state and the target state of the element.
+
+		transition-property	transform, box-shadow, filter, background-color	
+
+
+pseudo class	div:hover{ } , div:active{} , div:valid{} , div:focus{ }
+
+
+all:		The all property resets all properties
+
+
+
+
+
+
+
+
+
+
+
+
+
+
