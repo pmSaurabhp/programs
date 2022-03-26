@@ -152,7 +152,7 @@ live server	 no need of manual refreshing
 windows key + .   ->  emoji
 
 API	
-	DOM , timer, Fetch
+	DOM , timer, Fetch, geolocation api
 
 DOM ( Document Object Model )
 	is a web API that can be used by javaScript
@@ -343,7 +343,7 @@ Array	all methods from string
 		arr.reverse()  
 
 
-map((ele) => ele+2)								returns a new array with modified values
+map((ele) =>{ return ele+2 } )								returns a new array with modified values
 filter((ele, i, arr) => ele>0 )							returns a new array by filtering some elements
 reduce((acc,cur) => {return acc + cur},0 -> initial value)	returns a value ( total sum , max, min etc)
 find((acc) => acc.username === name)				returns a object or value to be searched
@@ -546,6 +546,9 @@ local storage
 		localStorage.setItem('workouts', JSON.stringify(this.#workouts)); 
               	local storage takes {key ,value} pair
 
+API	
+	DOM , timer, Fetch, geolocation api
+
 Synchronous code				
 			const p=123;			next line executes after current line is executed
 			alert("Text !")			blocking code	( 3rd line is not executed till we press OK in alert )
@@ -561,10 +564,94 @@ Asynchronous JavaScript
 			asynchronous event listeners		Load , 	
 			synchronous event listeners		click			click is not running in background	
 			
+			inside async function all code is synchronous
 
 AJAX	Asynchronous JavaScript and XML
 
 Promise		is a container for future asynchronous value
+		then() : waits till resource is loaded & then returns a promise
+
+async await	another way of consuming promises
+		it is syntactic sugar over promise and then()       await is substitute of then()
+
+Module		use <script type="module" src="script.js"></script>	when importing modules in script.js use type="module"
+		import does not make a copy , its like a live connection	( code is pasted directly into target file ) 
+
+		import { add } from "./shoppingCart.js"
+		export { add } 				( in file to be exported ) 
+
+NPM	( Node package Manager )
+	used to manage dependencies
+	npm -v		to check npm exist or not
+	npm init	to initialize node & make package.json
+	npm list	to see version of all dependencies
+	npm install	or npm i	to install node modules 
+					to install all dependencies present in package.json
+	then	npm audit fix		to fix version errors
+	then	Set-ExecutionPolicy RemoteSigned -Scope CurrentUser	to remove errors when using ng serve
+	
+	npx parcel index.html		to build project using parcel
+	
+	dist folder contains bundled (compressed ) project which parcel builds from original file  
+
+Deep clone	make real copy of all elements including nested elements ( inside array, objects )
+		we use lodash-es library	npm install lodash-es 
+		& use import cloneDeep from ".node_Modules/lodash-es/cloneDeep.js"
+
+Imperative Programing		we write all the steps
+
+Declarative Programming		we use inbuilt functions & avoid writing all steps ( abstraction ) 
+Functional Programming		A type Declarative Programming	
+
+
+Get all data from " form " without selecting each element
+								const dataArr = [...new FormData(formElement)];
+      								const dataObject = Object.fromEntries(dataArr);
+								console.log( dataObject )
+
+JSON.stringify()	converts JSON object to JSON string		( 
+			console.log(JSON.stringify({ x: 5, y: 6 }));
+			output: "{"x":5,"y":6}"
+
+API_key		key used when we make a post call
+		in get call key is used to show self made data using post call
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

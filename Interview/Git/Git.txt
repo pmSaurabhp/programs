@@ -16,7 +16,8 @@ To do it the Developer runs below commands in his terminal / Command prompt
 2) in cmd go to this location 
 3) git init           (this initializes a hidden .git folder ) 	 not mandatory
 4) git clone https://github.com/SSaurabhsahuu/djangoEcom.git     and paste your local project in local repository created through clone
-5) git add file_name			makes changes staged      	    	  	
+5) git add file_name			makes changes staged  
+   git add .				to stage all changes    	    	  	
 6) git commit -m  "first Commit"	commit saves changes in local repository   "first Commit" it tells why this commit was done
 7) git push				makes changes in Remote repository in github
 

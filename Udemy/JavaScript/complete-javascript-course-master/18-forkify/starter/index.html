@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="src/sass/main.scss" />
-    <script defer src="src/js/controller.js"></script>
+    <script type="module" defer src="src/js/controller.js"></script>
 
     <title>forkify // Search over 1,000,000 recipes</title>
   </head>
@@ -107,18 +107,18 @@
         </ul>
 
         <div class="pagination">
-          <!-- <button class="btn--inline pagination__btn--prev">
+           <button class="btn--inline pagination__btn--prev" style="opacity : 0">
             <svg class="search__icon">
               <use href="src/img/icons.svg#icon-arrow-left"></use>
             </svg>
-            <span>Page 1</span>
+            <span></span>
           </button>
           <button class="btn--inline pagination__btn--next">
-            <span>Page 3</span>
+            <span>Page 2</span>
             <svg class="search__icon">
               <use href="src/img/icons.svg#icon-arrow-right"></use>
             </svg>
-          </button> -->
+          </button>
         </div>
 
         <p class="copyright">
@@ -263,13 +263,13 @@
         <div class="upload__column">
           <h3 class="upload__heading">Recipe data</h3>
           <label>Title</label>
-          <input value="TEST" required name="title" type="text" />
+          <input value="TEST23" required name="title" type="text" />
           <label>URL</label>
-          <input value="TEST" required name="sourceUrl" type="text" />
+          <input value="TEST23" required name="sourceUrl" type="text" />
           <label>Image URL</label>
-          <input value="TEST" required name="image" type="text" />
+          <input value="TEST23" required name="image" type="text" />
           <label>Publisher</label>
-          <input value="TEST" required name="publisher" type="text" />
+          <input value="TEST23" required name="publisher" type="text" />
           <label>Prep time</label>
           <input value="23" required name="cookingTime" type="number" />
           <label>Servings</label>
