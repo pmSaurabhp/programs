@@ -327,14 +327,19 @@ const searchResults = async function(item){
   
     // let responseData = await response.json();
     const responseData = await get_or_post(`${API_URL}?search=${item}&key=${apiKey}`);
-    console.log(responseData);
+    //console.log(responseData);
     recipes = responseData.data.recipes;
-
+      console.log(recipes , recipes.length);
     totalPages = Math.ceil(recipes.length/10);
     
-    console.log(totalPages);
+    //console.log(totalPages);
+    if(!recipes.length){
+      console.log('recipes 0');
+      renderMessage(resultsContainer, "Oops! No Recipes Found 😅");
+    }
+    else  
+      renderResults();
     
-    renderResults();
     
     }
     catch(err){
