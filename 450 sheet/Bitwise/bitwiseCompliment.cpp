@@ -52,8 +52,11 @@ int binaryToDecimal(vector<int> bin)
     }
     int main()
 {
-    int n=10;
+   // int n=10;
  
-    bitwiseComplement(n);
-    
+    //bitwiseComplement(n);
+    int n=3;
+   vector<int> res= decimalToBinary(n);
+   for(int i=31;i>=0;i--)
+    cout<<res[i];
 }

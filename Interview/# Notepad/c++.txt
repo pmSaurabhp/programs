@@ -1,3 +1,33 @@
+	vector<int> v = {3,5,2,7}
+	int    arr[4] = {3,5,2,7}
+	string    str = "hello world"
+
+vector	
+	1d vector		vector<int> name(size, initial value)
+
+				vector<type>   	    name( size, type       no_name(size,initial value))
+	2d vector		vector<vector<int>> rank( 26 , 	vector<int>       (teams,0));
+
+	pass by reference	void fun_vector(vector<int> &vect)   //   &vect= &vect passed in function    fun_vector(vect);
+                	 	increases speed as new vector is not created
+	pass by value		void fun_vector(vector<int> vect)
+				decreases speed as all elements are copied in a new vector
+  	
+	vector<>  	push_back()	pop_back()	erase(iterator)		insert(iterator,value)
+
+unordered_map
+		umap[4]=1	or	umap.insert( {4,1} )
+		if( umap.find(4) != umap.end() )	to check if an element exist or not
+		
+		for (auto itr : ump) {
+		cout << itr.first <<" "<< itr.second << '\n';
+		}
+		// or use this
+		// for (auto itr = ump.begin(); itr != ump.end(); itr++) {
+		// 	cout << itr->first
+		// 		<<" "<< itr->second << '\n';
+		// }
+
 vector<>  	push_back()	pop_back()	erase(iterator)		insert(iterator,value)
 string<>  	push_back()	pop_back()	erase(iterator)		insert(iterator,value)
 stack<>		push()		pop()		top()
@@ -22,11 +52,22 @@ erase(iterator)
 		
 Functions in Algorithm.h		( works for arrays, vector, string )
 
-sort(v.begin(), v.end(), compare) 
+sort	sort(v.begin(), v.end(), compare) 
 	bool compare(same data type as v : v1 , same data type as v :v2 ) 
 	{ return v1.val > v2.val;  }        			for descending order
 
+	or  	using lambda function
+	sort(v.begin(),v.end(),[&another_array]( int &a, int &b){
+			return another_array[a] < another_array[b];
+	})
+	
+	always pass address in lambda functions as it does not makes copy of original as saves time & memory
+
 reverse(arr,arr+n)
+s.find("a")		returns index of element 
+			if not present returns random large value
+
+swap(a,b)	swaps 2 values
 
 binary_search(first_iterator, last_iterator, x)		returns true if x is present
 
@@ -41,6 +82,14 @@ when calling fun(arr);
 int fun(int b[])  or int fun(int *b) 
 b is just a pointer , it is pass by reference   
 
+Pass by reference
+			used to save memory
+				save time
+				return multiple values
+			not used
+				when we are concerned about safety of data we created
+				when we need dublicate value & do not want to modify original data
+  
 in c++ we cannot do pass by value for array all array are pass by reference  void fun(int arr[])    call  fun(arr) 
 for Vectors we can do both pass by value      void fun(vector<int> vect)
  		       and pass by reference  void fun(vector<int> &vect)
@@ -55,6 +104,15 @@ while(0)   false
 int range 10^9
 long int  ->  %ld  (in windows long int & int are same)
 long long int range 10^20
+
+
+Lambda function		[scope or variables to be accessed](parameters){ content }
+			
+			sort(s.begin(), s.end(), [order](char a, char b){
+            			return order.find(a) < order.find(b);
+        		});
+
+			[=] is used to select all variables as scope 
 
 
 //////////////////   for C language ////////////////////////////////////////////////////////////////////////////////////////////

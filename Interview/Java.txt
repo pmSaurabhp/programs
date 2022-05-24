@@ -13,3 +13,42 @@ read string input from user			https://www.javatpoint.com/how-to-take-string-inpu
 	nextLine()	takes whole line as input means takes input till we press enter 
 	next()		takes input till space
 
+
+// convert all to uppercase & remove vowels
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		String input1="Human Physiology";
+		String ans=consToggling(input1);
+		
+		System.out.println(ans);
+	}
+	
+ 
+	public static String consToggling(String input1){
+	    char[] str = input1.toCharArray();
+	    
+	    for (int i=0; i<input1.length(); i++)
+    {
+        if (str[i]>='A' && str[i]<='Z')
+            str[i] = (char)(str[i] + 'a' - 'A');
+        else if (str[i]>='a' && str[i]<='z')
+            str[i] = (char)(str[i] + 'A' - 'a');
+    }
+      input1=String.valueOf(str);
+    
+	    for(int c=0;c<input1.length();c++)
+        {   
+  
+        if(input1.charAt(c)=='a' || input1.charAt(c)=='e' ||input1.charAt(c)=='i' ||input1.charAt(c)=='o' 
+            ||input1.charAt(c)=='u' || input1.charAt(c)=='A' ||input1.charAt(c)=='E' 
+            ||input1.charAt(c)=='I' ||input1.charAt(c)=='O' ||input1.charAt(c)=='U' )
+            {   
+                input1 = input1.substring(0,c) + input1.substring(c+1);
+            }
+        
+        }
+        return input1;
+	}
+}

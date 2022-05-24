@@ -1,0 +1,35 @@
+2 pointer approach	
+			we dont have to restart calculation ( when we increase 'i' we do not need to restart 'j' from begining )
+			so we are able to discard many pairs just by checking values of 2 pointers
+			because of sorted structure we used
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

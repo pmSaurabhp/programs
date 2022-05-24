@@ -1,3 +1,6 @@
+freq(256,0)	as there are 256 characters
+freq[s[i]]	to access the character 
+
 Bitwise opearator
 	faster than Arithmetic operation
 	a & 1	returns last bit

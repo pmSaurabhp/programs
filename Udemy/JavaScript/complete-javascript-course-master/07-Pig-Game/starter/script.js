@@ -13,7 +13,7 @@ const roll=document.querySelector(".btn--roll");
 const newGame=document.querySelector(".btn--new");
 const hold=document.querySelector(".btn--hold");
 const diceImg=document.querySelector(".dice");
-
+const target_score = document.querySelector(".target--score");
 // simple but does not follow DRY
 
 // let number;
@@ -67,8 +67,9 @@ const diceImg=document.querySelector(".dice");
 // });
 
 // some what complex but follows DRY
-let number, score=0, currentScore=0, currentPlayer=0;
+let number, targetScore = 30 ,score=0, currentScore=0, currentPlayer=0;
 // console.log(currentScore_0);
+target_score.textContent = ` Target : ${targetScore} `;
 
 // change player function
 const changePlayer=function(){
@@ -76,8 +77,11 @@ const changePlayer=function(){
         return;
     document.querySelector("#score--"+currentPlayer).textContent = score + currentScore;
 
-    if(score + currentScore >= 20)
+    if(score + currentScore >= targetScore)
         { diceImg.classList.add('hidden');
+            target_score.classList.add('hidden');
+            roll.classList.add('hidden');
+            hold.classList.add('hidden');
         document.querySelector(`#name--${currentPlayer}`).textContent="🎉✨ Winner Player "+(currentPlayer+1)+" 🎁";
         document.querySelector(`.player--${currentPlayer}`).style.flex="80%";
         document.querySelector(`.player--${currentPlayer}`)
@@ -131,6 +135,9 @@ newGame.addEventListener("click", function(){
  // UI changes
  player_0.classList.add("player--active");
  diceImg.classList.remove('hidden');
+ target_score.classList.remove('hidden');
+ roll.classList.remove('hidden');
+ hold.classList.remove('hidden');
 
  document.querySelector(`.player--0`).classList.remove("player--winner");
  document.querySelector(`.player--1`).classList.remove("player--winner");

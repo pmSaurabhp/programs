@@ -16,7 +16,7 @@ int main()
   cout<<ump[10]<<"\n";    //  10 and 25 also get inserted in ump
   ump[25]=400;
                               // to find an element use if(ump.find(20)==ump.end() ) ;
-  if(ump.find(15)==ump.end()) // donot use if(ump[15] == 0) it will insert 15 int hash map
+  if(ump.find(15)==ump.end()) // donot use if(ump[15] == 0) it will insert 15 in hash map
         cout<<"not found \n";
   else
         cout<<"Found\n";

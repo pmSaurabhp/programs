@@ -1,0 +1,74 @@
+
+Pass by reference
+			used to save memory
+				save time
+				return multiple values
+			not used
+				when we are concerned about safety of data we created
+
+Recursion	when  function calls itself
+		
+Backtracking	is an approach to solve a problem in which we find a solution if its invalid we come back ( backtrack ) to a state & find another solution 
+		and keep repeating untill we get desired solution
+		we use recursion for implementing Backtracking
+		
+		2 ways to implement
+					When child returns its contribution and parent combines contribution of all child     (save memory & increase speed)
+					When parent pass its contribution & child combines its contribution and transver it to his children
+
+BT Questions	when question asks to return all possible solutions following some criteria
+
+Framework
+		1) Take Decision
+		2) Divide problem to samller Subproblem
+		3) Make prototype  f(s,i, curr) = f(s,i+1, curr) U f(s,i+1, curr + s[i])
+				   f(s,i)	= s(0 to i) U f(s,i+1)
+				   f(s,i)	= f(s,i+1, curr+s[i]) U f(s,i till dublicates, curr)
+		4) implement using recursion				(if push & pop are made on curr then then we can use pass by reference )
+		5) Base Case	(& pruning)
+
+Decisions	1) include or exclude A[0]
+		2) include A[0] to A[i] ( make partition )
+		3) include A[0] or exclude all dublicates of A[0]
+
+1) https://leetcode.com/problems/subsets/
+2) https://leetcode.com/problems/combinations/
+3) https://leetcode.com/problems/combination-sum/
+4) https://leetcode.com/problems/palindrome-partitioning/
+5) https://leetcode.com/problems/combination-sum-ii/
+6) https://leetcode.com/problems/permutations
+7) https://leetcode.com/problems/word-search/
+8) https://leetcode.com/problems/n-queens/
+	https://leetcode.com/problems/sudoku-solver/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,8 +6,11 @@ void fun(int arr[]) // pass by reference
 {                   // pass by value is not possible in array use vectors for pass by value
     arr[1]=100;
 }
-void fun_vector(vector<int> &vect)   // its pass by reference
-{                               // void change(vector<int> vect)   pass by value
+void fun_vector(vector<int> &vect)   // its pass by reference    &vect= &vect passed in function
+{                                    // it increases speed 
+                                     // https://www.geeksforgeeks.org/passing-vector-function-cpp/
+                            
+                            // void change(vector<int> vect)   pass by value
     vect[1]=200;
 }
 int main()
@@ -32,6 +35,7 @@ vect.push_back(20);          //   vect = { _ , _ , _ , 20 }
 
 fun(arr);
 fun_vector(vect);
+cout<<"type = "<<typeid(vect).name();
 
 for(int i=0;i<3;i++)
 {

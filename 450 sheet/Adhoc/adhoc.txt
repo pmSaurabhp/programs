@@ -1,0 +1,33 @@
+1) https://leetcode.com/problems/nth-digit/
+2) sanket microsoft interview	https://leetcode.com/problems/trapping-rain-water
+3) 				https://leetcode.com/problems/trapping-rain-water-ii/
+4) https://leetcode.com/problems/online-majority-element-in-subarray/
+5) https://leetcode.com/problems/majority-element
+6) https://leetcode.com/problems/task-scheduler			recursion 5
+7) seems to be backtracking but is Maths			recursion 6
+	https://leetcode.com/problems/count-numbers-with-unique-digits/				done
+	https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/		not done
+	https://leetcode.com/problems/permutation-sequence/					not done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

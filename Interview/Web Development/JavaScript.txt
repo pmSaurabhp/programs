@@ -566,6 +566,21 @@ Asynchronous JavaScript
 			
 			inside async function all code is synchronous
 
+
+JavaScript Runtime = javaScript Engine ,  Web APIs, a callback queue and the event loop
+
+1 thread in javaScript	asynchronous tasks are run in Web Api environment ( is not part of the JavaScript engine
+									    it’s a part of browser’s JavaScript runtime environment 
+									    or Nodejs JavaScript runtime environment (in case of Nodejs) )
+
+			JavaScript Runtime = javaScript Engine ,  Web APIs, a callback queue and the event loop
+
+			Please keep in mind that the setTimeout is not a part of the JavaScript engine, 
+			it’s a part of something known as web APIs (in browsers) and C/C++ APIs (in node.js).
+			The event loop, the web APIs and the message queue/task queue are not part of the JavaScript engine, 
+			it’s a part of browser’s JavaScript runtime environment or Nodejs JavaScript runtime environment (in case of Nodejs)
+			https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff
+
 AJAX	Asynchronous JavaScript and XML
 
 Promise		is a container for future asynchronous value

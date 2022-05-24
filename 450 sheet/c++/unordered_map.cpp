@@ -10,9 +10,10 @@ int main()
 
 	// Initialization
 	mymap = {
-            { "Australia", "Canberra"},
-			{ "U.S.", "Washington" },
-			{ "France", "Paris" } };
+             { "Australia", "Canberra"},
+			 { "U.S.", "Washington" },
+			 { "France", "Paris" } 
+            };
 
 	// prints the bucket number of the beginning element
     cout<<"Bucket count"<<mymap.bucket_count()<<"\n";
