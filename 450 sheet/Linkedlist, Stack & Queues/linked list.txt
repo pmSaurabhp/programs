@@ -1,0 +1,42 @@
+Node* ptr == Node *ptr
+
+Node* head 	stores address of 1st node
+head is just a pointer so it just stores the address
+
+int* ptr		ptr++ , increments by 4 bytes
+char* ptr		ptr++ , increments by 1 byte
+
+pattern - slow, fast pointer
+
+1)https://leetcode.com/problems/middle-of-the-linked-list/description/
+2)https://leetcode.com/problems/intersection-of-two-linked-lists/description/
+3)https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+4)https://leetcode.com/problems/reverse-linked-list/description/
+5)https://leetcode.com/problems/linked-list-cycle/description/
+6)https://leetcode.com/problems/linked-list-cycle-ii/description/
+	https://www.youtube.com/watch?v=QfbOhn0WZ88
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

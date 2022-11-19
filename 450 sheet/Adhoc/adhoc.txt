@@ -9,9 +9,10 @@
 	https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/		not done
 	https://leetcode.com/problems/permutation-sequence/					not done
 
-
-
-
+8) https://leetcode.com/problems/gas-station			2_Pointer 1
+9) https://leetcode.com/problems/partition-labels
+10) https://www.geeksforgeeks.org/best-meeting-point-2d-binary-array/     dp_5
+11) https://leetcode.com/problems/first-missing-positive/		  dp_7
 
 
 

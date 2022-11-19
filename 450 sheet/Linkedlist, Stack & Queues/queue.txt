@@ -1,0 +1,22 @@
+FIFO
+enqueue, dequeue , front, isEmpty     O(1) complexity
+
+
+Applications	LRU Cache
+		job Scheduling
+		Trees level order traversal
+		KAFKA ( Asynchronous data pipeline )	
+
+1) https://leetcode.com/problems/number-of-recent-calls/description/
+2) https://leetcode.com/problems/implement-stack-using-queues/description/
+3) https://leetcode.com/problems/implement-queue-using-stacks/description/
+
+
+
+
+
+
+
+
+
+

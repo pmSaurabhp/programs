@@ -244,7 +244,7 @@ catch(err){
 }
 });
 
-};
+}; // get data end
 
 let page=1 , totalPages;
 let start = (page - 1)*10;
@@ -253,6 +253,7 @@ let recipes=[];
 let pageContainer = document.querySelector(".pagination");
 console.log(pageContainer);
 
+// to display next or prev page 
 pageContainer.addEventListener("click", function(e){
   // if(page === 1)
   // e.target.closest(".pagination").querySelector(".pagination__btn--prev").classList.add(".hidden")
@@ -412,7 +413,7 @@ const setLocalStorage = function() {
   localStorage.setItem('bookmarkRecipes', JSON.stringify(bookmarkRecipes)); 
               // local storage takes {key ,value} pair
               //  JSON.stringify converts object to string 
-              // but this  breaks the protype chain
+              // but this  breaks the protoype chain
               // so we cannot access functions present in workout class 
 }
 

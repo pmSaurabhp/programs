@@ -10,3 +10,182 @@ width:50px;
 #set{
   margin-left:400px;
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap"); 
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto"); 
+* { 
+    box-sizing: border-box;
+} 
+
+.social-icons { 
+    display: flex; 
+    font-size: 20px; 
+    align-items: center; 
+    justify-content: center; 
+    flex-flow: row wrap;
+} 
+
+.col-sm-6 { 
+    position: relative; 
+    width: 100%; 
+    padding-right: 15px; 
+    padding-left: 15px;
+} 
+
+@media (min-width: 576px){ 
+  .col-sm-6 { 
+    -ms-flex: 0 0 50%; 
+    flex: 0 0 50%; 
+    max-width: 50%;
+  } 
+}     
+
+.text { 
+    font-size: 25px; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    position: absolute;
+} 
+
+@media only screen and (max-width: 2381px){ 
+  .text { 
+    margin-top: 2rem;
+  } 
+}     
+
+@media only screen and (max-width: 1340px){ 
+  .text { 
+    margin-top: 4rem;
+  } 
+}     
+
+body { 
+    margin:  0; 
+    font-family:  "Poppins", sans-serif; 
+    font-size:   1rem; 
+    font-weight:   400; 
+    line-height:   1.5; 
+    color:  var(--text); 
+    text-align:   left; 
+    background-color:  var(--bg);
+    height: 100vh; 
+    overflow-x: hidden; 
+} 
+
+.no-scroll-preload { 
+    overflow: hidden; 
+    height: auto;
+} 
+
+html { 
+    font-family:    sans-serif; 
+    line-height:    1.15; 
+    -webkit-text-size-adjust:    100%; 
+    -webkit-tap-highlight-color:    transparent;
+    overflow-y:   visible; 
+    scrollbar-color:   #ca9eff #f1f1f1; 
+    scrollbar-width:   auto;
+    scroll-behavior:  smooth;
+    background-color: #f6f6f6; 
+    transition: background-color .3s;
+} 
+
+:root { 
+    --atom-size:  400px; 
+    --link-size: 64px; 
+    --trans-props: all 0.2s ease; 
+} 
+
+html[light-mode="dark"] { 
+    background-color: #141516; 
+    color: #ced4e2;
+} 
+
+a { 
+    color: #007bff; 
+    text-decoration: none; 
+    background-color: transparent;
+} 
+
+.socialicon { 
+    display: flex; 
+    position: relative; 
+    overflow: hidden; 
+    width: var(--link-size); 
+    height: var(--link-size); 
+    background-color: #fff; 
+    margin: 8px; 
+    border-radius: 50%; 
+    box-shadow: 2px 5px 5px var(--shadow-col); 
+    text-decoration: none; 
+    transition: var(--trans-props);
+} 
+
+a:hover { 
+    color: #0056b3; 
+    text-decoration: underline;
+} 
+
+a.socialicon { 
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+} 
+
+a:hover { 
+    color: transparent;
+} 
+
+.socialicon:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+} 
+
+html[light-mode="dark"] .socialicon  { 
+    background-color: #141516;
+} 
+
+*,:after,:before { 
+    box-sizing: border-box;
+} 
+
+.socialicon:after { 
+    content: ""; 
+    width: var(--link-size); 
+    height: var(--link-size); 
+    position: absolute; 
+    transform: translate(0, var(--link-size)); 
+    border-radius: 50%; 
+    transition: var(--trans-props);
+} 
+
+.socialicon:hover:after { 
+    transform: translate(0) scale(1.2);
+} 
+
+:-webkit-scrollbar { 
+    width: 16px;
+} 
+
+:-webkit-scrollbar-thumb { 
+    border-radius: 2px; 
+    max-height: 10px; 
+    -webkit-box-shadow: inset 0 0 6px #bb86fc; 
+    background: #bb86fc; 
+    transition: 0.3s;
+} 
+
+:-webkit-scrollbar-track { 
+    -webkit-box-shadow: inset 0 0 6px #bb86fc; 
+    border-radius: 2px; 
+    background: #f1f1f1;
+} 
+
+svg { 
+    overflow: hidden; 
+    vertical-align: middle;
+} 
+
+.linkedin-icon { 
+    margin-left: 15px;
+} 
+
+

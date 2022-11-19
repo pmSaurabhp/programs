@@ -1,7 +1,25 @@
 2 pointer approach	
 			we dont have to restart calculation ( when we increase 'i' we do not need to restart 'j' from begining )
 			so we are able to discard many pairs just by checking values of 2 pointers
-			because of sorted structure we used
+			this optimization is possible because of sorted structure
+
+1) https://leetcode.com/problems/two-sum/
+2) https://leetcode.com/problems/minimum-size-subarray-sum/
+3) https://leetcode.com/problems/longest-substring-without-repeating-characters/
+4) https://leetcode.com/problems/subarrays-with-k-different-integers/
+5) https://leetcode.com/problems/container-with-most-water/
+6) https://leetcode.com/problems/trapping-rain-water/
+7) https://leetcode.com/problems/move-zeroes/
+
+
+
+
+
+
+
+
+
+
 
 
 

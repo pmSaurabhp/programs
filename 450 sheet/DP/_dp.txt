@@ -1,0 +1,58 @@
+Decisions 	include / exclude	1st/last element of input
+		include			1st/last element of solution  & see what are the possibilities ( take min/max of all possibilities ) 
+					or ( always include current & may exclude previous subarray contiguous ) 
+		take a decision which depends upon previous decision & some state
+		sub array is variable & integer is variable  ( 2d dp )
+		
+framework
+	identify subproblem
+	take a decision
+	check presence of overlapping subproblems
+	order of filling
+	space optimization
+		
+// subset		O(n)
+1) https://leetcode.com/problems/house-robber/
+2) https://leetcode.com/problems/house-robber-ii/
+3) https://leetcode.com/problems/climbing-stairs/
+
+// subarray		O(n)
+4) https://leetcode.com/problems/maximum-subarray/								atka
+5) https://leetcode.com/problems/decode-ways/									atka atka (implementation ratlo many edge cases present
+6) https://leetcode.com/problems/maximum-product-subarray
+
+7) https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/					atka
+8) https://leetcode.com/problems/longest-valid-parentheses/
+
+// subsequence		O(n^2)
+9) https://leetcode.com/problems/longest-increasing-subsequence/
+10) https://leetcode.com/problems/wiggle-subsequence/
+11) https://leetcode.com/problems/longest-arithmetic-subsequence/
+  
+12) https://leetcode.com/problems/coin-change/			decision 1					atka
+13) https://leetcode.com/problems/palindrome-partitioning-ii/			O(n^3)				atka
+
+// 2d dp	with variable arr & variable integer
+14) https://leetcode.com/problems/target-sum/									atka
+15) https://leetcode.com/problems/coin-change/			decision 2  
+16) https://leetcode.com/problems/coin-change-2/								atka
+17) https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1# 					atka
+
+// 2d dp with variable arr_1 & variable arr_2
+18) https://leetcode.com/problems/edit-distance/								atka atka (space optimization)
+19) https://leetcode.com/problems/distinct-subsequences/							atka atka (decision )
+
+//  2d dp with variable sub array
+20) https://leetcode.com/problems/longest-palindromic-substring							atka atka (charo khane chit)
+
+// 2d matrix as input
+21) https://leetcode.com/problems/minimum-path-sum/
+22) https://leetcode.com/problems/dungeon-game/
+
+
+
+
+
+
+
+

@@ -21,7 +21,8 @@ Type Cohesion   let a = '14' - '10'        output  4     ( Type Number )
 		output  10   ( Type Number ) 
 		for - , * , / , conditional operator    we get Number   and for  +  we get String
 
-'a'.charCodeAt(0)		converts 'a' to ASCII value
+
+'abc'.charCodeAt(0)		converts 'a' to ASCII value		
 String.fromCharCode(97)		converts ASCII value to Character
 
 eg. Capitalize a character
@@ -51,16 +52,6 @@ Ternary operator  (three operators)( one line if else )
 Non-Primitive			array, Object
 (	https://www.geeksforgeeks.org/primitive-and-reference-value-in-javascript/?ref=rp	)
 
-
-const		 
-		primitive data types	 variables cannot be reassigned
-					 const a=5    then  a=6 is invalid		
-		Non-Primitive 		 variables cannot be reassigned but its members can be modified	
-					 const a=["1","2","3"]
-					 a=["5","4","3"]      is invalid
-					 a[1]=5  & a.push(10) is valid
-					 
-		https://www.w3schools.com/js/js_const.asp
 	
 Pass By Value		all primitive data type			
 Pass By Reference	only Arrays  and  Object 	( no way to pass by reference primitive data type )
@@ -97,7 +88,7 @@ Memory Management	for memory optimzation javascript compiler gives one memory to
 			let a=b=['1','2','3']					both point at same address
 			b[0]=4
 			output	a=['4','2','3']		b=['4','2','3']		both point at same address
- 
+
 string		In javaScript strings are immutable ( str[4]='g'   will not change str )
 		so to change ith element of string 
 			let str="hello";			
@@ -110,6 +101,16 @@ string		In javaScript strings are immutable ( str[4]='g'   will not change str )
 
 		str.slice(0,4)		returns a string from 0  index to 3rd index of str
 		str.slice(5)		returns a string from 5th index to last index of str
+
+const		 
+		primitive data types	 variables cannot be reassigned
+					 const a=5    then  a=6 is invalid		
+		Non-Primitive 		 variables cannot be reassigned but its members can be modified	
+					 const a=["1","2","3"]
+					 a=["5","4","3"]      is invalid
+					 a[1]=5  & a.push(10) is valid
+					 
+		https://www.w3schools.com/js/js_const.asp 
 
 Functions 	can be made in 3 ways in javaScript
 		Function Declaration		function test(a,b){ some code }			test(4,10)
@@ -163,14 +164,13 @@ DOM ( Document Object Model )
 			 <p>	  <a>	div	img
 
 document.querySelector(".someClass")	 =	<div class="someClass">hello</div>
+document.querySelectorAll(".some")		returns all elements with .some class
 
 document.querySelector(".some").innerHTML	=   all html inside .some element
 document.querySelector(".some").insertAdjacentHTML('afterbegin', <div> hello </div> )		
 
 document.querySelector(".some").textContent	div, p
 document.querySelector(".some").value		input
-
-document.querySelectorAll(".some")		returns all elements with .some class
 
 Class Manipulation
 document.querySelector(".some").classList.add("anotherClass")	add class
@@ -230,7 +230,7 @@ function is block scoped (only in strict mode )
 
 Hoisting	use variables before they are declared
 
-				Hoist		value defore declaration
+				Hoist		value before declaration
 function declaration		yes		same as in declaration
 var				yes		undefined
 let & const			No		uninitialized & is stored in TDZ ( Temporal Dead Zone )
@@ -351,7 +351,7 @@ findIndex((acc) => acc.username === name)	same as indexOf(name)
 
 sort((a,b)=> a-b)		if true then return 1 else return -1 
 
-use of these inbuilt functions		with funcions we can use chain other functions
+use of these inbuilt functions		with functions we can chain other functions
 					manually create separate variable to store the result is not needed 
 
 let flag=false;
@@ -375,7 +375,7 @@ flag=!flag;			to toggle between true & false otherwise we have to do
 
 Number		Number(" 30px")			o/p  NaN  Not a Number
 		Number.parseInt("   30$ ")	o/p  30
-		Number.parseFloat(" 2.55rem")	o/p  2.55	2.5rem coming from css
+		Number.parseFloat(" 2.55rem")	o/p  2.55	2.55rem coming from css
 		Number.isFinite(20)		o/p  true	.isFinite()	is used to check if a value is Number or not
 		Number.isFinite(20.45)		o/p  true
 		Number.isFinite("20")		o/p  false
@@ -414,7 +414,7 @@ delete		message.remove()
 set styles
 		message.style.backgroundColor = "red";			background-color changes to backgroundColor ( - is replaced with camel case )
 get styles
-		getComputedStyle(element).backgroundColor  	we can do message.style.backgroundColor but only works when styles modified in javascript
+		getComputedStyle(element).backgroundColor  	we can do message.style.backgroundColor but only works when styles were 10:51 AM 28-05-2022 modified in javascript
 		getComputedStyle(element).height	   	so use getComputedStyle() in every case
 
 		document.documentElement.style.setProperty('--color-primary', 'orangered');	to set user made css variables 	( --color-primary )
