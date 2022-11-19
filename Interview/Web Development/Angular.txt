@@ -1,0 +1,79 @@
+
+
+NPM	( Node package Manager )
+	used to manage dependencies
+	npm -v		to check npm exist or not
+	npm list	to see version of all dependencies
+
+setup github project in local & install node modules 
+	
+	npm install	or npm i	to create node modules 
+							to install all dependencies present in package.json
+	then	npm audit fix		to fix version errors
+	then	Set-ExecutionPolicy RemoteSigned -Scope CurrentUser	to remove errors when using ng serve
+
+Firebase host
+		https://faun.pub/host-angular-app-for-free-8a443d324cda
+		donot use github for now
+
+ng new First-angular --no-strict
+? Would you like to add Angular routing? No
+? Which stylesheet format would you like to use? CSS
+
+ng serve				to start server
+ng g c componenet_name			to create new component
+npm install --save bootstrap   &  add  @import '~bootstrap/dist/css/bootstrap.css';    in style.css
+ng build --prod	--base-href /my-cool-app/	converts our .ts node .js html css code 
+						into js html css which minimizes our 
+						project file size
+ng build 		also used to check lazy loading 
+ng serve 	lazy loading generates chunk files in networks tab of developer console
+
+ng test					to start testing
+npm install --save @ngrx/store		to use ngrx store
+
+--save		was used to add dependency name in package.json
+			now it happens automatic ,
+			npm install @ngrx/store   will install dependency & also add in package.json
+
+package.json	contains all information about project
+				contains all dependency name used in project
+
+package-lock.json	a package may depend on many other packages
+					so package-lock.json stores informtaion (versions)
+				    of these dependencies
+
+devDependencies		dependencies that are needed only during development
+
+path
+os
+file system		const fs = reqire("fs");
+				// read file in asynchronous way i.e. non-blocking mode
+				fs.readFile('file1.txt', 'utf8', (err,data)=>{
+					console.log("reading complete");
+				})
+
+				fs.readFileSync('file1.txt'); // read file in synchronous way i.e. blocking mode
+
+
+//  Angular
+string interpolation {{}}		output data in html
+property binding []			output change of properties of elements under some criteria
+event binding []			take input from html when a event occurs
+2 way binding [()]			property binding + event binding
+
+if reactivity is missing see  lecture-93    Using Subjects as event emitters
+
+@ decortors	@Input		
+		@Output		use import { EventEmitter } from '@angular/core';
+
+Directives	*ngIf
+		*ngFor
+		ngStyle
+		ngClass
+
+#some_name	referencing
+
+observable & subscribe 			https://www.youtube.com/watch?v=wwEeXFvK5yw
+loading spinner				https://zoaibkhan.com/blog/how-to-add-loading-spinner-in-angular-with-rxjs/
+calling function of other component	https://stackblitz.com/edit/call-function-from-another-component?file=src%2Fapp%2Fapp.component.ts
